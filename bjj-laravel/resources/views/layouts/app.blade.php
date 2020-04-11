@@ -21,7 +21,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="manifest" href="{{asset('favicon/site.webmanifest')}}">
-<title>Bjj</title>
+<title>BJJ Plymouth | @yield('title')</title>
     </head>
 
     <body>
@@ -49,11 +49,11 @@
             <ul>
                 <li><a href="{{'about'}}">About Us</a></li>
                 <li><a href="{{'gallery'}}">Gallery</a></li>
-                {{-- <li><a href="{{'seminars'}}">Seminars</a></li>
+                <li><a href="{{'seminars'}}">Seminars</a></li>
                 <li><a href="{{'timetable'}}">Timetable</a></li>
                 <li><a href="{{'prices'}}">Prices</a></li>
                 <li><a href="{{'contact'}}">Contact</a></li>
-                <li><a href="{{'partners'}}">Partners</a></li> --}}
+                <li><a href="{{'partners'}}">Partners</a></li>
                 <!-- <li><a href="?page=log" class="si">Sign in</a></li> -->
             </ul>
         </nav>

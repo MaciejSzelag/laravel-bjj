@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title', 'Gallery')
+    
 
 @section('content')
 <section class="gallery-container">

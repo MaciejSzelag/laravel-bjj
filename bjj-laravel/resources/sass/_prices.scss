@@ -1,0 +1,579 @@
+.price-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: $blueGradienMobile30;
+    overflow: hidden;
+
+    .b-kids {
+        @include flexCenter;
+        justify-content: space-evenly;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 120px;
+        width: 300px;
+        height: 50px;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+        border-top: 2px solid rgba(245, 245, 245, 0.459);
+        border-radius: 50px;
+        overflow: hidden;
+        color: whitesmoke;
+        font-size: 1.8rem;
+
+    }
+
+    .adults,
+    .kids,
+    .priv {
+        @include flexCenter;
+        border-radius: 50px;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .button {
+        position: absolute;
+        left: 33.3%;
+        top: 0;
+        width: 33.5%;
+        height: 100%;
+        border-radius: 50px;
+        border-left: 1px solid rgba(245, 245, 245, 0.459);
+        border-right: 1px solid rgba(245, 245, 245, 0.459);
+        background-image: linear-gradient(rgb(0, 148, 148), rgb(0, 61, 119));
+        transition: 1s cubic-bezier(0.3, 0.93, 0.3, 0.93);
+
+    }
+
+
+    .active-kids {
+        left: 66.6%;
+    }
+
+    .active-priv {
+        left: 0;
+    }
+
+    .price-container {
+        @include flexCenter;
+
+        position: absolute;
+        left: -100%;
+        top: 250px;
+        width: 300%;
+        height: calc(90vh - 250px);
+        transition: 2s cubic-bezier(0.84, -0.6, 0.01, 1.56);
+
+
+        .price_adults,
+        .price_kids,
+        .price_private {
+            width: calc(100% / 3);
+            height: 100%;
+
+        }
+
+
+
+        .price_small_container {
+            @include flexCenter;
+            flex-direction: column;
+            color: white;
+
+            .p_container_title {
+                @include flexCenter;
+                width: 100%;
+                height: 15%;
+                font-size: 2rem;
+
+
+                .title-price {
+                    transform: translateY(-100px);
+                }
+
+
+            }
+
+            .price_cards {
+                // @include flexCenterEvenly;
+                @include flexCenter;
+                width: 100%;
+                height: 70%;
+
+                // background-color: rgb(105, 130, 200);
+
+
+                .card {
+                    @include flexCenterEvenly;
+                    flex-direction: column;
+                    width: 15%;
+                    height: 100%;
+                    background-image: linear-gradient(rgb(2, 131, 131), rgb(0, 82, 158));
+                    margin-left: 5px;
+                    // box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.376);
+                    border-bottom: 2px solid rgba(245, 245, 245, 0.15);
+                    border-top: 3px solid rgba(245, 245, 245, 0.459);
+                    border-radius: 10px;
+                    transition: .4s linear;
+
+                    .topCard {
+                        .card-title {
+
+                            font-size: 3rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .popularCard {
+                    transform: scale(1.2);
+                    background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));
+
+                    .topCard {
+                        .card-title {
+
+                            font-size: 3.5rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 2.5rem;
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .active-private {
+        left: 0;
+    }
+
+    .active-kids-c {
+        left: -200%;
+    }
+}
+
+@media (max-width:1366px) {
+    .price-wrap {
+        .b-kids {
+            top: 150px;
+        }
+
+
+        .price-container {
+            .price_small_container {
+                .price_cards {
+
+
+
+                    .card {
+                        width: 19%; //2
+                        height: 100%;
+                        margin-left: 5px;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 3rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+
+                                font-size: 3.8rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:1024px) and (max-height:1366px) {
+    .price-wrap {
+        .b-kids {
+            top: 100px;
+            width: 420px;
+            height: 60px;
+            font-size: 1.9rem;
+        }
+
+        .price-container {
+            top: 150px;
+            height: calc(91vh - 60px);
+
+            .price_small_container {
+                .p_container_title {
+                    height: 20%;
+
+                    .title-price {
+                        font-size: 4rem;
+                        transform: translateY(0);
+                    }
+                }
+
+                .price_cards {
+                    height: 80%;
+                    flex-direction: column;
+
+                    .card {
+                        flex-direction: row;
+                        width: 80%;
+                        height: 20%;
+
+                        margin-top: 10px;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 4rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.7rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) and (max-height:768px) {
+    .price-wrap {
+        .b-kids {
+            top: 50px;
+            width: 220px;
+            height: 35px;
+            font-size: 1.4rem;
+        }
+
+        .price-container {
+            top: 100px;
+            height: calc(89vh - 60px);
+
+            .price_small_container {
+                flex-direction: column;
+
+                .p_container_title {
+                    height: 20%;
+
+                    .title-price {
+                        font-size: 2.8rem;
+                        transform: translateY(-40px);
+                    }
+                }
+
+                .price_cards {
+                    flex-direction: row;
+                    height: 67%;
+                    width: 90%;
+
+                    .card {
+                        flex-direction: column;
+                        width: 19%;
+                        height: 100%;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 2.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 3.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1024px) and (max-height:600px) {
+    .price-wrap {
+        .b-kids {
+            top: 50px;
+            width: 220px;
+            height: 35px;
+            font-size: 1.4rem;
+        }
+
+        .price-container {
+            top: 100px;
+            height: calc(89vh - 60px);
+
+            .price_small_container {
+                flex-direction: column;
+
+                .p_container_title {
+
+                    height: 20%;
+
+                    .title-price {
+                        font-size: 2.8rem;
+                        transform: translateY(-40px);
+                    }
+                }
+
+                .price_cards {
+                    flex-direction: row;
+                    height: 67%;
+                    width: 90%;
+
+                    .card {
+                        flex-direction: column;
+                        width: 19%;
+                        height: 100%;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 2.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 3.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .price-wrap {
+        .b-kids {
+            top: 50px;
+            // width: 420px;
+            height: 55px;
+            // font-size: 1.9rem;
+        }
+
+        .price-container {
+            top: 100px;
+            height: calc(90vh - 60px);
+
+            .price_small_container {
+                .p_container_title {
+                    height: 17%;
+
+                    .title-price {
+                        font-size: 3.2rem;
+                        // transform: translateY(0);
+                    }
+                }
+
+                .price_cards {
+                    height: 80%;
+                    flex-direction: column;
+
+                    .card {
+                        flex-direction: row;
+                        width: 80%;
+                        height: 20%;
+
+                        margin-top: 10px;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 3.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.4rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 4rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .price-wrap {
+        .b-kids {
+            top: 50px;
+            width: 320px;
+            height: 40px;
+
+        }
+
+        .price-container {
+            .price_small_container {
+                .p_container_title {
+                    .title-price {
+                        font-size: 2.8rem;
+                    }
+                }
+
+                .price_cards {
+                    .card {
+                        width: 75%;
+                        height: 18%;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 2.8rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 3.1rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 2.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:414px) {
+    .price-wrap {
+        .b-kids {
+            top: 45px;
+            width: 200px;
+            height: 30px;
+            font-size: 1.3rem;
+        }
+
+        .price-container {
+            top: 110px;
+            height: calc(90vh - 60px); //
+
+            .price_small_container {
+                .p_container_title {
+                    height: 15%;
+
+                    .title-price {
+                        font-size: 1.7rem;
+                        // transform: translateY(0);
+                    }
+                }
+
+                .price_cards {
+                    height: 80%;
+                    flex-direction: column; //
+
+                    .card {
+                        flex-direction: row; //
+                        width: 80%;
+                        height: 20%;
+
+                        margin-top: 10px;
+
+                        .topCard {
+                            .card-title {
+                                font-size: 2rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .popularCard {
+                        .topCard {
+                            .card-title {
+                                font-size: 2.2rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

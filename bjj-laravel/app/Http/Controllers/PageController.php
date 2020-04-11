@@ -13,7 +13,12 @@ class PageController extends Controller
     public function showPage($newTab) {
            $pages = [
             'about'=>view('pages/about'),
-            'gallery'=>view('pages/gallery')
+            'gallery'=>view('pages/gallery'),
+            'seminars'=>view('pages/seminar'),
+            'timetable'=>view('pages/timetable'),
+            'prices'=>view('pages/prices'),
+            'contact'=>view('pages/contact'),
+            'partners'=>view('pages/partners')
            ];
         return $pages[$newTab];
     }

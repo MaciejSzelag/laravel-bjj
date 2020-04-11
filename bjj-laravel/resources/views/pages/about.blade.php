@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'About Us')
 @section('content')
 <div class="about-wrap">
     <div class="about_content">
