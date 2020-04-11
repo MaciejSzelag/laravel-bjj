@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('title', 'About Us')
+@extends('layouts.app',['title'=>'Bjjplymouth | About Us | Ian Harrop | Amy Harrop | Jiu Jitsu'])
 @section('content')
 <div class="about-wrap">
     <div class="about_content">

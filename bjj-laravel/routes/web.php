@@ -13,4 +13,3 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/{newTab}', 'PageController@showPage');
-

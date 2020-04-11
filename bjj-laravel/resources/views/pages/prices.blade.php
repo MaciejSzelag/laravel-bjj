@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Prices')
+@extends('layouts.app',['title'=>'BJJPlymouth | Seminars | Plymouth | Devon'])
 @section('content')
 <div class="price-wrap">
     <div class="b-kids">

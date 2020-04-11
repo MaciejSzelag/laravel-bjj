@@ -1,7 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Gallery')
-    
-
+@extends('layouts.app',['title'=>'BJJPlymouth | Gallery | Students | Adults | Kids'])
 @section('content')
 <section class="gallery-container">
     <div class="gallery_wrap">

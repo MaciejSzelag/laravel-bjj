@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Contact')
+@extends('layouts.app',['title'=>'BJJPlymouth | Contact | Address | E-mail | Telephone number'])
 @section('content')
 <div class="contact-wrap">
     <div class="contact_container">

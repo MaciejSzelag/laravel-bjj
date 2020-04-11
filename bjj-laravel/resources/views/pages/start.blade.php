@@ -1,4 +1,3 @@
-
 @section('content')
 <div class="main-wrap">
     <div class="start-wrap">

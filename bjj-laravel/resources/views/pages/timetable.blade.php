@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Timetable')
+@extends('layouts.app',['title'=>'BJJPlymouth | Timetable | Students | Adults | Kids'])
 @section('content')
 <section class="timetable-wrap">
     <div class="timetable-wrap_container">

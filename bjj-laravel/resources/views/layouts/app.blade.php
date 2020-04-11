@@ -21,9 +21,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="manifest" href="{{asset('favicon/site.webmanifest')}}">
-<title>BJJ Plymouth | @yield('title')</title>
+       <title>    
+             @isset($title)
+                  {{ $title }}
+             @endisset
+       </title>
     </head>
-
     <body>
         <section class="loadPage_main">
             <div class="center-wrap">
