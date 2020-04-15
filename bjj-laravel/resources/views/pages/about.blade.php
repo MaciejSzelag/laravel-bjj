@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>'Bjjplymouth | About Us | Ian Harrop | Amy Harrop | Jiu Jitsu'])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <div class="about-wrap">
     <div class="about_content">

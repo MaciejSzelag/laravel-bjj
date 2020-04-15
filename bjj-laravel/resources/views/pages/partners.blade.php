@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>'BJJPlymouth | Parners | Students | Adults | Kids'])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <section class="partners-wrap">
     <h1 class="partners_h1">Partners</h1>

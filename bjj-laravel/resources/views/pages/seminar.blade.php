@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>'BJJPlymouth | Bjj | Brazilian jiu jitsu | Students | Adults | Kids'])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <div class="seminar-wrap">
     <div class="seminar_header">

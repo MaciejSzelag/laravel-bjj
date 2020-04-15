@@ -10,6 +10,7 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
+        max-width: 1920px;
         height: calc(100vh - 90px);
         margin-top: 90px;
         overflow: hidden;
@@ -59,6 +60,7 @@
     .seminar_content {
         @include flexCenterColumn;
         width: 100%;
+        max-width: 1920px;
         height: 130vh;
         background-image: $blueGradienMobile30;
         color: wheat;

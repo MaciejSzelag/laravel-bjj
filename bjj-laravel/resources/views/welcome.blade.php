@@ -1,7 +1,6 @@
-@extends('layouts.app',['title'=>'BJJPlymouth | Bjj | Brazilian jiu jitsu | Students | Adults | Kids'])
+@extends('layouts.app',['title'=>$title])
 @section('content')
-@include('pages.start')
-
+    @include('pages.start')
 @endsection
 
 

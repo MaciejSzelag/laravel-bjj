@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>'BJJPlymouth | Gallery | Students | Adults | Kids'])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <section class="gallery-container">
     <div class="gallery_wrap">

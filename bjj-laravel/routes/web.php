@@ -12,4 +12,10 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/{newTab}', 'PageController@showPage');
+Route::get('/about', 'AboutController@about');
+Route::get('/gallery', 'GalleryController@gallery');
+Route::get('/seminar', 'SeminarController@seminars');
+Route::get('/timetable', 'TimetableController@timetable');
+Route::get('/prices', 'PricesController@prices');
+Route::get('/partners', 'PartnersController@partners');
+Route::get('/contactForm', 'ContactFormController@contactForm');
