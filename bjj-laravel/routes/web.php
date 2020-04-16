@@ -19,3 +19,4 @@ Route::get('/timetable', 'TimetableController@timetable');
 Route::get('/prices', 'PricesController@prices');
 Route::get('/partners', 'PartnersController@partners');
 Route::get('/contactForm', 'ContactFormController@contactForm');
+Route::post('/contact', 'ContactFormController@mail');

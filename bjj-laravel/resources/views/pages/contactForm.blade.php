@@ -6,17 +6,18 @@
    
     <div class="contact-form">
     
-        <form action="">
-          <label for="fname">Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <form action="/contact" method="POST">
+            @csrf
+          <label for="name">Name <span>*</span></label>
+          <input type="text" id="name" required name="name" placeholder="Enter your name..">
       
-          <label for="emial">E-mail</label>
-          <input type="text" id="email" name="email" placeholder="Your e-mail">
+          <label for="emial">E-mail <span>*</span></label>
+          <input type="text" id="email" required name="email" placeholder="Enetr your e- mail">
       
      
       
           <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Write something.." ></textarea>
+          <textarea id="message" required name="message" placeholder="Enetr your message..." ></textarea>
       
           <input type="submit" value="Send" class="send">
         </form>

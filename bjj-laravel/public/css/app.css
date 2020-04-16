@@ -2939,6 +2939,10 @@ html {
   color: wheat;
 }
 
+.contact-form-wrap .contact_container .contact-form form label span {
+  color: red;
+}
+
 .contact-form-wrap .contact_container .contact-form form input {
   width: 20rem;
   height: 4rem;
