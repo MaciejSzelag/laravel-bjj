@@ -15,9 +15,10 @@ class ContactFormController extends Controller
     }
 
     public function mail(ContactRequest  $request){
-        Mail::to('szelag.maciej@gmail.com')->send(new NewcontactRequest($request));
+        Mail::to('setUpaddress@gmail.com')->send(new NewcontactRequest($request));
       
-    return view('pages/contact');
+    // return view('pages/contact');
+    return back()->with('status','Thank you! Your message has been recived.');
     }
 
 }

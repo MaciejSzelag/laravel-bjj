@@ -42,7 +42,32 @@
         .contact-form {
             width: 95rem;
             padding: 5rem 1rem;
+            position: relative;
 
+            span {
+                color: red;
+            }
+
+            .alert {
+                @include flexCenter;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-70%);
+                width: 100rem;
+                height: 40rem;
+                font-size: 2.5rem;
+                z-index: 2;
+                border-radius: 20px;
+                // animation: hideAlert 2s 5s ease-in-out 1 both;
+
+            }
+
+            .alert-success {
+                background-color: rgb(208, 234, 215);
+                border: 1px solid rgb(142, 216, 162);
+                color: rgb(0, 73, 18);
+            }
 
             form {
 
@@ -50,13 +75,13 @@
                 flex-direction: column;
                 border-radius: 1rem;
 
+
+
                 label {
                     font-size: 1.8rem;
                     color: wheat;
 
-                    span {
-                        color: red;
-                    }
+
 
                 }
 
@@ -175,5 +200,24 @@
             }
 
         }
+    }
+}
+
+@keyframes hideAlert {
+    0% {
+        // display: flex;
+        opacity: 1;
+        width: 120%;
+    }
+
+    70% {
+        opacity: 0;
+        width: 120%;
+    }
+
+    100% {
+        // display: none;
+        opacity: 0;
+        width: 0;
     }
 }

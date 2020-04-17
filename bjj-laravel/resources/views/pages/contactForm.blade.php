@@ -5,9 +5,14 @@
 <div class="contact_container">
    
     <div class="contact-form">
-    
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+      </div>
+      @else
         <form action="/contact" method="POST">
             @csrf
+      
           <label for="name">Name <span>*</span></label>
           <input type="text" id="name" required name="name" placeholder="Enter your name..">
       
@@ -16,12 +21,13 @@
       
      
       
-          <label for="message">Your Message</label>
+          <label for="message">Your Message <span>*</span></label>
           <textarea id="message" required name="message" placeholder="Enetr your message..." ></textarea>
       
           <input type="submit" value="Send" class="send">
+        
         </form>
-   
+        @endif
     </div>
     <div class="contact-info_wrap">
         <div class="contact-details">
