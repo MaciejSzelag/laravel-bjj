@@ -14,13 +14,27 @@ class PageTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/about');
-        $this->assertTrue(true);
-
+        $response = $this->get('/');
+    
         $response->assertStatus(200);
        
     }
        /** @test */
+
+
+       public function contactForm()
+{
+   
+
+ 
+
+    $response = $this->get('/contactForm')
+                 ->type( 'name')
+                 ->type( 'email')
+                 ->type('submit');
+    $response->assertStatus(200);
+
+}
   
 
 }

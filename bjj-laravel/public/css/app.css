@@ -115,6 +115,7 @@
 }
 
 .loadPage_main {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -122,8 +123,17 @@
   height: 100vh;
   background-image: linear-gradient(-30deg, #5260e0 50%, #5288e0 75%, #5260e0 100%);
   opacity: 1;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 1000;
+}
+
+.loadPage_main .p-message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.5rem;
 }
 
 .loadPage_main .center-wrap {
@@ -152,8 +162,8 @@
           animation: loadPage_main 1s linear infinite both;
 }
 
-.loadPage-hide {
-  display: none;
+.loadPage-show {
+  display: block;
 }
 
 @-webkit-keyframes loadPage_main {
@@ -767,8 +777,6 @@ html {
   text-align: center;
   width: 100%;
   height: auto;
-  -webkit-animation: opacity_0_1 2s 2s ease-out 1 both;
-          animation: opacity_0_1 2s 2s ease-out 1 both;
 }
 
 .about-wrap .about_content {
