@@ -4,7 +4,7 @@
     text-align: center;
     width: 100%;
     height: auto;
-    animation: opacity_0_1 2s 2s ease-out 1 both;
+    // animation: opacity_0_1 .5s ease-out 1 both;
 
     .about_content {
         @include flexCenterColumn;

@@ -28,20 +28,7 @@
        </title>
     </head>
     <body>
-        <section class="loadPage_main">
-            <div class="center-wrap">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </section>
+
         <div class="bars-wrap" id="mobile-menu">
             <div class="bars">
                 <div class="bar top"></div>
@@ -67,7 +54,7 @@
             <div class="feet">Copyrights &copy;  BJJ Plymouth - All Rights Reserved</div>
             <div class="feet">Website made by Maciej Szeląg</div>
         </footer>
-        <script src="{{asset('js/loadPage.js')}}"></script>
+       
         <script src="{{asset('js/main.js')}}"></script>
     </body>
 

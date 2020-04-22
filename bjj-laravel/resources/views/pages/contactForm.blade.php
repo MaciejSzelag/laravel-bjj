@@ -1,5 +1,21 @@
 @extends('layouts.app',['title'=>$title])
 @section('content')
+<section class="loadPage_main">
+    <p class="p-message">Sending...</p>
+    <div class="center-wrap">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</section>
+
 <div class="contact-form-wrap ">
 <h1>Contact Us</h1>
 <div class="contact_container">
@@ -17,14 +33,14 @@
           <input type="text" id="name" required name="name" placeholder="Enter your name..">
       
           <label for="emial">E-mail <span>*</span></label>
-          <input type="text" id="email" required name="email" placeholder="Enetr your e- mail">
+          <input type="email" id="email" required name="email" placeholder="Enetr your e- mail">
       
      
       
           <label for="message">Your Message <span>*</span></label>
           <textarea id="message" required name="message" placeholder="Enetr your message..." ></textarea>
       
-          <input type="submit" value="Send" class="send">
+          <input type="submit" value="Send" class="send" id="sendMessage">
         
         </form>
         @endif
@@ -49,5 +65,5 @@
 </div>
 </div>
 
-
+<script src="{{asset('js/loadPage.js')}}"></script>
 @endsection

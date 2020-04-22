@@ -1,5 +1,5 @@
 .loadPage_main {
-    // display: none;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,8 +7,18 @@
     height: 100vh;
     background-image: $blueGradienMobile30;
     opacity: 1;
-    transition: .5s;
+    transition: 1s;
     z-index: 1000;
+
+    .p-message {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 2.5rem;
+
+    }
 
     .center-wrap {
         position: absolute;
@@ -38,8 +48,12 @@
 
 }
 
-.loadPage-hide {
-    display: none;
+// .loadPage-hide {
+//     display: none;
+// }
+
+.loadPage-show {
+    display: block;
 }
 
 @keyframes loadPage_main {
