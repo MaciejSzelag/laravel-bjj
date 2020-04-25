@@ -20,3 +20,7 @@ Route::get('/prices', 'PricesController@prices');
 Route::get('/partners', 'PartnersController@partners');
 Route::get('/contactForm', 'ContactFormController@contactForm');
 Route::post('/contact', 'ContactFormController@mail');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
