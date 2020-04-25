@@ -3,24 +3,22 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
-    public function testAdding()
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testBasicTest()
     {
-        $a = 2;
-        $b = 3;
-
-        $result = $a + $b;
-        $this->assertEquals(5, $result);
+        $this->assertTrue(true);
+    }
+    public function contactForm()
+    {
+        $this->assertTrue(true);
     }
 
-    public function testDivding()
-    {
-        $a = 21;
-        $b = 3;
-
-        $result = $a / $b;
-        $this->assertEquals(7, $result, 'This should equal 7 for test dividing');
-    }
 }
