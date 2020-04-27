@@ -5,7 +5,7 @@
             <div class="start_title_header">
                 <h1 class="start_title_h1">BJJ Plymouth</h1>
                 <h1 class="start_title_h1">Seminar</h1>
-                <div class="get_started"><a href="?page=seminars">Get Started</a></div>
+                <div class="get_started"><a href="?page=seminars">Last seminar</a></div>
             </div>
         </div>
         <div class="start_title">
