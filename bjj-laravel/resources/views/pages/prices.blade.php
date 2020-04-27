@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>$title])
+@extends('layouts.appMine',['title'=>$title])
 @section('content')
 <div class="price-wrap">
     <div class="b-kids">

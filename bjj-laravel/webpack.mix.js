@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,8 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
+<<<<<<< HEAD
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
 
 mix.browserSync('http://localhost:8000/');
+=======
+mix.js("resources/js/app.js", "public/js").sass(
+    "resources/sass/app.scss",
+    "public/css"
+);
+mix.browserSync({
+    proxy: "localhost:8000"
+});
+>>>>>>> Ticket-3-load-animation

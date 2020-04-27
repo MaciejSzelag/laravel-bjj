@@ -23,11 +23,11 @@ class ContactFormController extends Controller
         ContactUS::create([
             'name' => $request->name,
             'email' => $request->email,
-            #'message' => $request->message,
-            'message' => 'Darek Test',
+            'message' => $request->message,
+            // 'message' => 'Darek Test',
         ]);
 
-        dd(333);
+        // dd(333);
 
 
         Mail::to('setUpaddress@gmail.com')->send(new NewcontactRequest($request));
