@@ -14,7 +14,11 @@ class PageTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+
+        $response = $this->get('/gallery')
+             ->assertSeeText('Gallllllery')
+             ->assertSeeText('Our warriors always work hard and on the competitions they get many medals!!!');
+                        
     
         $response->assertStatus(200);
        
@@ -35,6 +39,7 @@ class PageTest extends TestCase
     $response->assertStatus(200);
 
 }
-  
+
+
 
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>$title])
+@extends('layouts.appMine',['title'=>$title])
 @section('content')
 <section class="loadPage_main">
     <p class="p-message">Sending...</p>

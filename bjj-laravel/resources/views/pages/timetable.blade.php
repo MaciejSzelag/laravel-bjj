@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>$title])
+@extends('layouts.appMine',['title'=>$title])
 @section('content')
 <section class="timetable-wrap">
     <div class="timetable-wrap_container">

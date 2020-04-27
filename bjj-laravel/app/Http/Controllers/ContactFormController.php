@@ -14,7 +14,19 @@ class ContactFormController extends Controller
         return view('pages/contactForm', compact('title'));
     }
 
-    public function mail(ContactRequest  $request){
+
+    public function mail(ContactRequest $request)
+    {
+
+        ContactUS::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            // 'message' => 'Darek Test',
+        ]);
+
+        // dd(333);
+
         Mail::to('setUpaddress@gmail.com')->send(new NewcontactRequest($request));
       
     // return view('pages/contact');
