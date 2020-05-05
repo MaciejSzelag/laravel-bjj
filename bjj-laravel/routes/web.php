@@ -22,3 +22,5 @@ Route::get('/prices', 'PricesController@prices');
 Route::get('/partners', 'PartnersController@partners');
 Route::get('/contactForm', 'ContactFormController@contactForm');
 Route::post('/contact', 'ContactFormController@mail');
+Route::get('/admin', 'AdminController@showAdmin');
+Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
