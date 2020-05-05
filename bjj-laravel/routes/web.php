@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'PageController@index');
+use App\Http\Controllers\indexController;
+
+Route::get('/', 'indexController@index');
 Route::get('/about', 'AboutController@about');
 Route::get('/gallery', 'GalleryController@gallery');
 Route::get('/seminar', 'SeminarController@seminars');

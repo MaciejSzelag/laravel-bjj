@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUS;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest; 
 
 use Mail;
 use App\Mail\NewcontactRequest;
+
 class ContactFormController extends Controller
 {
     public function contactForm(){

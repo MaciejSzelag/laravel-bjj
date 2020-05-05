@@ -21,17 +21,18 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
 
-
-
-    public function testDivding()
-    {
-        $a = 21;
-
-
-
-        $result = $a / $b;
-        $this->assertEquals(7, $result, 'This should equal 7 for test dividing');
-
     }
+
+    // public function testDivding()
+    // {
+    //     $a = 21;
+    //     $b = 7;
+
+
+
+    //     $result = $a / $b;
+    //     $this->assertEquals(7, $result, 'This should equal 7 for test dividing');
+
+    // }
 
 }
