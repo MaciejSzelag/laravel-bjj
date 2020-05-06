@@ -3164,13 +3164,15 @@ html {
   align-items: center;
   width: 25rem;
   height: 25rem;
-  background-color: yellowgreen;
+  background-color: #a6cf53;
   border-radius: 50%;
   box-shadow: 0 0 2rem 0.5rem rgba(134, 127, 113, 0.575);
 }
 
 .admin-log .wrap-log form .imgcontainer img {
   width: 100%;
+  transform: rotate(0);
+  transition: 0.7s ease-in-out;
 }
 
 .admin-log .wrap-log form .container {
@@ -3248,6 +3250,11 @@ html {
 .admin-log .wrap-log form .small {
   flex-direction: row;
   font-size: 1.4rem;
+}
+
+.admin-log .wrap-log form:hover .imgcontainer img {
+  width: 50%;
+  transform: rotate(360deg);
 }
 
 footer {

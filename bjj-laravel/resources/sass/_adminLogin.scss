@@ -6,7 +6,6 @@
     height: 100vh;
     background-color: rgb(255, 246, 235);
 
-
     .wrap-log {
         display: flex;
         justify-content: center;
@@ -15,8 +14,8 @@
         width: 50rem;
         height: 90%;
         background-color: wheat;
-        border-radius: .8rem;
-        box-shadow: 0 0 2rem .5rem rgba(128, 128, 128, 0.575);
+        border-radius: 0.8rem;
+        box-shadow: 0 0 2rem 0.5rem rgba(128, 128, 128, 0.575);
 
         h2 {
             font-size: 3rem;
@@ -35,20 +34,20 @@
             width: 100%;
             height: 90%;
 
-
             .imgcontainer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 25rem;
                 height: 25rem;
-                background-color: yellowgreen;
+                background-color: rgb(166, 207, 83);
                 border-radius: 50%;
-                box-shadow: 0 0 2rem .5rem rgba(134, 127, 113, 0.575);
+                box-shadow: 0 0 2rem 0.5rem rgba(134, 127, 113, 0.575);
 
                 img {
                     width: 100%;
-
+                    transform: rotate(0);
+                    transition: 0.7s ease-in-out;
                 }
             }
 
@@ -59,7 +58,6 @@
                 flex-direction: column;
                 width: 80%;
 
-
                 label {
                     margin: 1rem 0;
                     font-size: 2rem;
@@ -67,10 +65,10 @@
 
                 input {
                     width: 25rem;
-                    padding: .5rem;
+                    padding: 0.5rem;
                     padding-left: 1rem;
                     border: none;
-                    border-radius: .5rem;
+                    border-radius: 0.5rem;
                 }
 
                 input:focus {
@@ -80,7 +78,6 @@
 
                 ::placeholder {
                     color: rgb(214, 214, 214);
-                    ;
                 }
 
                 .checkbox {
@@ -92,10 +89,8 @@
 
                     font-size: 1.5rem;
 
-
                     input {
                         width: 10%;
-
                     }
                 }
 
@@ -104,14 +99,13 @@
                     width: 15rem;
                     height: 3rem;
                     color: white;
-                    border-radius: .5rem;
+                    border-radius: 0.5rem;
                     background-color: rgb(0, 105, 217);
                 }
 
                 button:hover {
                     background-color: rgb(2, 118, 241);
                 }
-
             }
 
             .small {
@@ -119,6 +113,13 @@
                 font-size: 1.4rem;
             }
         }
-
+        form:hover {
+            .imgcontainer {
+                img {
+                    width: 50%;
+                    transform: rotate(360deg);
+                }
+            }
+        }
     }
 }
