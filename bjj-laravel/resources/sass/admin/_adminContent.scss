@@ -1,0 +1,17 @@
+.admin-dashboard-body {
+    background-color: rgb(26, 34, 38);
+}
+
+.admin-content {
+    position: absolute;
+    top: $heightBlock;
+    left: $adminAsideWidth;
+    width: calc(100% - #{$adminAsideWidth});
+    height: calc(100% - #{$heightBlock});
+    background-color: rgb(26, 34, 38);
+
+    h1 {
+        color: white;
+    }
+
+}

@@ -24,3 +24,6 @@ Route::get('/contactForm', 'ContactFormController@contactForm');
 Route::post('/contact', 'ContactFormController@mail');
 Route::get('/admin', 'AdminController@showAdmin');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
+Route::get('/dashboard', 'DashboardController@dashboardPanel');
+Route::get('/d-prices', 'dashboardPricesController@getPriceBoard');
+Route::get('/d-timetable', 'dashboardTimetableController@getTimetableBoard');

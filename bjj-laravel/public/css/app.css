@@ -3257,6 +3257,172 @@ html {
   transform: rotate(360deg);
 }
 
+.dashoard-menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100vh;
+}
+
+.dashoard-menu-wrap .dashoard-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+  background-color: #17242b;
+}
+
+.dashoard-menu-wrap .dashoard-menu h1,
+.dashoard-menu-wrap .dashoard-menu h2 {
+  width: 100%;
+  padding: 0.5rem;
+  color: gray;
+  text-align: center;
+}
+
+.dashoard-menu-wrap .dashoard-menu h1 {
+  color: whitesmoke;
+  font-size: 2rem;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block,
+.dashoard-menu-wrap .dashoard-menu .dashoard-loged {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4rem;
+  background-color: #222d32;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block {
+  width: 90%;
+  border: 0.1rem solid rgba(255, 255, 255, 0.151);
+  border-right: none;
+  border-top: none;
+  transition: 0.1s linear;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-weight: 200;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.1s linear;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block-b-top {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.151);
+}
+
+.dashoard-menu-wrap .dashoard-menu .active {
+  border-left: 2px solid #0084ff;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block:hover {
+  background-color: #1a2226;
+  border-left: 2px solid #0084ff;
+}
+
+.dashoard-menu-wrap .dashoard-menu .block:hover a {
+  color: grey;
+}
+
+.dashoard-menu-wrap .dashoard-menu .topId {
+  background-color: #357ca5;
+}
+
+.dashoard-menu-wrap .dashoard-menu .dashoard-loged {
+  width: 100%;
+  margin-top: 0;
+  border: none;
+}
+
+.activePrice .dashoard-menu .activePrice {
+  border-left: 2px solid #0084ff;
+  background-color: #1a2226;
+}
+
+.activePrice .dashoard-menu .activePrice a {
+  color: grey;
+}
+
+.activeDashboardHome .dashoard-menu .activeDashboardHome {
+  border-left: 2px solid #0084ff;
+  background-color: #1a2226;
+}
+
+.activeDashboardHome .dashoard-menu .activeDashboardHome a {
+  color: grey;
+}
+
+.activetimetable .dashoard-menu .activetimetable {
+  border-left: 2px solid #0084ff;
+  background-color: #1a2226;
+}
+
+.activetimetable .dashoard-menu .activetimetable a {
+  color: grey;
+}
+
+.navLine {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 20rem);
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #3393ca;
+}
+
+.navLine .name,
+.navLine .date {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 1.8rem;
+}
+
+.navLine .date {
+  background-color: #1a70a1;
+  padding: 0 4rem;
+}
+
+.navLine .name {
+  border-right: 1px solid rgba(255, 255, 255, 0.678);
+  padding: 0 3.5rem;
+}
+
+.admin-dashboard-body {
+  background-color: #1a2226;
+}
+
+.admin-content {
+  position: absolute;
+  top: 4rem;
+  left: 20rem;
+  width: calc(100% - 20rem);
+  height: calc(100% - 4rem);
+  background-color: #1a2226;
+}
+
+.admin-content h1 {
+  color: white;
+}
+
 footer {
   display: flex;
   justify-content: center;

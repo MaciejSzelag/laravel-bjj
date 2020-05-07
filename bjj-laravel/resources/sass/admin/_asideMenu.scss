@@ -1,0 +1,144 @@
+$top: 5rem;
+$border:.1rem solid rgba(255, 255, 255, 0.151);
+
+.dashoard-menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $adminAsideWidth;
+    height: 100vh;
+
+    .dashoard-menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 100%;
+        background-color: rgb(23, 36, 43);
+
+        h1,
+        h2 {
+            width: 100%;
+            padding: .5rem;
+            color: gray;
+            text-align: center;
+        }
+
+        h1 {
+            color: whitesmoke;
+            font-size: 2rem;
+        }
+
+        .block,
+        .dashoard-loged {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: $heightBlock;
+            background-color: rgb(34, 45, 50);
+        }
+
+
+
+        .block {
+            width: 90%;
+            border: $border;
+            border-right: none;
+            border-top: none;
+            transition: .1s linear;
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding: 1rem;
+                font-weight: 200;
+                font-size: 1.5rem;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                color: whitesmoke;
+                transition: .1s linear;
+            }
+
+
+        }
+
+        .block-b-top {
+
+            border-top: $border;
+        }
+
+        .active {
+            border-left: 2px solid rgb(0, 132, 255);
+        }
+
+
+        .block:hover {
+            background-color: rgb(26, 34, 38);
+            border-left: 2px solid rgb(0, 132, 255);
+
+            a {
+                color: grey;
+            }
+        }
+
+        .topId {
+            background-color: rgb(53, 124, 165);
+        }
+
+        .dashoard-loged {
+            width: 100%;
+            margin-top: 0;
+            border: none;
+        }
+    }
+
+
+
+
+}
+
+
+.activePrice {
+    .dashoard-menu {
+        .activePrice {
+
+            border-left: 2px solid rgb(0, 132, 255);
+            background-color: rgb(26, 34, 38);
+
+            a {
+                color: grey;
+            }
+        }
+    }
+}
+
+.activeDashboardHome {
+    .dashoard-menu {
+        .activeDashboardHome {
+
+            border-left: 2px solid rgb(0, 132, 255);
+            background-color: rgb(26, 34, 38);
+
+            a {
+                color: grey;
+            }
+        }
+    }
+}
+
+.activetimetable {
+    .dashoard-menu {
+        .activetimetable {
+
+            border-left: 2px solid rgb(0, 132, 255);
+            background-color: rgb(26, 34, 38);
+
+            a {
+                color: grey;
+            }
+        }
+    }
+}
