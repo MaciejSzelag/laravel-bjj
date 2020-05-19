@@ -1,0 +1,95 @@
+$sideSpace: 20px;
+
+.dashboard-home-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+    .home-statistics {
+        position: absolute;
+        top: 50px;
+        left: $sideSpace;
+        right: $sideSpace;
+        height: 40%;
+        border-radius: 5px;
+        box-shadow: 0 7px 20px 3px rgba(0, 36, 77, 0.753);
+        background-color: rgb(26, 34, 38);
+
+        .h-s-wrap-top {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .s1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                width: 400px;
+                height: 40%;
+                background-color: rgb(26, 34, 38);
+
+                border-radius: 10px 10px 10px 10px;
+
+
+
+                .s1-title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 30%;
+                    background-color: rgba(0, 103, 151, 0.596);
+                    color: rgb(196, 196, 196);
+                    font-size: 1.8rem;
+                    letter-spacing: 2px;
+                    box-shadow: inset 0 -5px 10px 1px rgba(0, 36, 77, 0.568);
+                    border-radius: 10px 10px 0 0;
+                }
+
+                .s1-details {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 70%;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0 7px 20px 3px rgba(0, 36, 77, 0.24);
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    .s1det,
+                    .sd {
+                        p {
+                            padding: 5px 0;
+                            font-size: 1.6rem;
+                        }
+                    }
+
+
+                    .s1det {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    .sd {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+}

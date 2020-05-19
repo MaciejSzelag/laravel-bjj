@@ -5,13 +5,14 @@
         </div>
        <div class="dashoard-loged"></div>
        <h2>Main Navigation</h2>
-       <div class="block block-b-top activeDashboardHome"><a href="/dashboard">Home</a></div>
-       <div class="block activePrice"><a href="/d-prices">Prices</a></div>
-       <div class="block activetimetable"><a href="/d-timetable">Timetable</a></div>
-       <div class="block"><a href="#">Seminar</a></div>
-       <div class="block"><a href="#">Blog</a></div>
-       <div class="block"><a href="#">News</a></div>
-       <div class="block"><a href="#">About</a></div>
+       <div class="block block-b-top active">Home</div>
+       <div class="block">Prices</div>
+       <div class="block">Timetable</div>
+       <div class="block">Seminar</div>
+       <div class="block">Blog</div>
+       <div class="block">News</div>
+       <div class="block">About</div>
     </div>
-    <script src="{{asset('/js/dashboard/aside.js')}}"></script>
+    <script src="{{asset('/../js/dashboard/functions.js')}}"></script>
+    <script src="{{asset('/../js/dashboard/aside.js')}}"></script>
 </aside>
