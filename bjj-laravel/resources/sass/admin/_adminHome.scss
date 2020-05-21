@@ -110,6 +110,58 @@ $sideSpace: 20px;
             font-size: 3rem;
         }
 
+        .alert {
+
+
+            .alert-success-member {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 50;
+                width: 700px;
+                height: 100px;
+                background-color: rgba(124, 255, 124, 0.828);
+                color: rgb(2, 75, 0);
+                border: 1px solid rgb(2, 95, 2);
+                border-radius: 10px;
+                font-size: 2rem;
+
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: auto;
+                    height: auto;
+                    // border: 1px solid white;
+                    color: white;
+                    // border-radius: 2px;
+                    // border-bottom-left-radius: 50%;
+                    background-color: transparent;
+                    font-size: 1.5rem;
+                    padding: 2px 20px 3px;
+                    transition: .3s ease-in-out;
+
+
+                }
+
+                span:hover {
+
+                    color: green;
+                }
+
+
+            }
+
+            .alertMember {
+                display: none;
+            }
+        }
+
         .add-newMember {
             display: flex;
             justify-content: center;
@@ -126,6 +178,8 @@ $sideSpace: 20px;
                 font-size: 3rem;
                 margin-bottom: 30px;
             }
+
+
 
             form {
                 display: flex;
@@ -183,6 +237,8 @@ $sideSpace: 20px;
                         color: rgba(0, 103, 151, 0.719);
                     }
                 }
+
+
             }
 
 
@@ -215,6 +271,16 @@ $sideSpace: 20px;
                         color: honeydew;
                         width: 100%;
                         height: 100%;
+
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            text-decoration: none;
+                            color: whitesmoke;
+                        }
                     }
 
                     .edit-btn {

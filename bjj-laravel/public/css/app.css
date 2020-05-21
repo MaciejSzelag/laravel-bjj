@@ -3530,6 +3530,45 @@ html {
   font-size: 3rem;
 }
 
+.dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  width: 700px;
+  height: 100px;
+  background-color: rgba(124, 255, 124, 0.828);
+  color: #024b00;
+  border: 1px solid #025f02;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  color: white;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 2px 20px 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member span:hover {
+  color: green;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .alert .alertMember {
+  display: none;
+}
+
 .dashboard-home-wrap .h-s-wrap-block .add-newMember {
   display: flex;
   justify-content: center;
@@ -3648,6 +3687,16 @@ html {
   color: honeydew;
   width: 100%;
   height: 100%;
+}
+
+.dashboard-home-wrap .h-s-wrap-block table tr td button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .edit-btn {

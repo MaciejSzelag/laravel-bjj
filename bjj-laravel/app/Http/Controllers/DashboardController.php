@@ -24,6 +24,13 @@ class DashboardController extends Controller
         TeamMember::create($request->all());
 
         // return back()->with('status','A new member was added!');
-        return redirect("/dashboard");
+        return redirect("/dashboard")->with('status-mamber','A new member has been added!');;
+    }
+    public function deleteMember($id){
+  
+       $findIdMember =  TeamMember::find($id);
+       $findIdMember->delete();
+       return redirect("/dashboard")->with('status-mamber','A  member has been deleted!');
+
     }
 }

@@ -31,3 +31,10 @@ for (let i = 0; i < blocks.length; i++) {
         }
     })
 }
+
+const closeAlert = document.getElementById("closeAlert");
+const alertMember = document.getElementById("alertMember");
+closeAlert.addEventListener('click', () => {
+    alertMember.classList.add("alertMember")
+    console.log("clicked")
+})

@@ -44,10 +44,18 @@
     </div>
     <div class="h-s-wrap-block">
         <h1>Checkmat Plymouth</h1>
-        <div class="alert"></div>
+        <div class="alert">
+            @if (session('status-mamber'))
+            <div class="alert-success-member"  id="alertMember">
+                <span id="closeAlert">close</span>
+                {{ session('status-mamber') }}
+            </div>
+            @endif
+        </div>
         <div class="add-newMember">
             <p>Add new member</p>
-            
+        
+
             <form action="/pages/admin/dashboard/newMemberAdded" method="post">
                 @csrf
                 <div class="input-label">
@@ -74,9 +82,10 @@
                    
                     <input type="submit" class="submitMember">
                 </div>
+
               
             </form>
-  
+         
         </div>
 
         <h1>Team members</h1>
@@ -88,9 +97,14 @@
                 <th>Level</th>
                 <th>Start date</th>
                 <th>Date of Birth</th>
-                <th colspan="3">action</th>
+                <th>Last updates</th>
+                <th colspan="2">action</th>
             </tr>
+
+
+            
             @foreach ($member as $mem)
+     
             <tr>
                 <td>
                      {{$mem['name']}}
@@ -109,13 +123,15 @@
                     {{$mem['DateOfBirth']}}
                 </td>
 
-                <td class="action-btn"><button class="edit-btn">EDIT</button></td>
                 <td>
                     {{$mem['updated_at']}}
                 </td>
-                <td class="action-btn"><button class="delete-btn">DELETE</button></td>
+                
+                {{-- <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updateMember',['id'=> $mem['id']])}}">Update</a></button></td> --}}
+            <td class="action-btn"><button class="delete-btn"><a href="{{route('admin.deleteMember',['id'=> $mem['id']])}}">Delete</a></button></td>
            
             </tr>
+    
             @endforeach 
         </table>
 
