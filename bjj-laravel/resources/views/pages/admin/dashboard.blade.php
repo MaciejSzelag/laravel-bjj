@@ -44,6 +44,7 @@
         @include('/pages/admin/dashboard/d-about')
      </section>
 </section>
+
 <script src="{{asset('/../js/dashboard/functions.js')}}"></script>
 <script src="{{asset('/../js/dashboard/admin.js')}}"></script>
 

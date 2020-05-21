@@ -2,16 +2,20 @@ $sideSpace: 20px;
 
 .dashboard-home-wrap {
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
 
+    padding: 80px 0;
 
     .home-statistics {
-        position: absolute;
-        top: 50px;
-        left: $sideSpace;
-        right: $sideSpace;
-        height: 40%;
+
+        width: 90%;
+        height: 300px;
         border-radius: 5px;
         box-shadow: 0 7px 20px 3px rgba(0, 36, 77, 0.753);
         background-color: rgb(26, 34, 38);
@@ -33,8 +37,6 @@ $sideSpace: 20px;
                 background-color: rgb(26, 34, 38);
 
                 border-radius: 10px 10px 10px 10px;
-
-
 
                 .s1-title {
                     display: flex;
@@ -70,7 +72,6 @@ $sideSpace: 20px;
                         }
                     }
 
-
                     .s1det {
                         display: flex;
                         justify-content: space-evenly;
@@ -89,7 +90,166 @@ $sideSpace: 20px;
         }
     }
 
+    .h-s-wrap-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 7px 20px 3px rgba(1, 27, 58, 0.753);
+        background-color: rgb(26, 34, 38);
+        color: honeydew;
+        padding: 20px;
+        padding-bottom: 50px;
+        margin-top: 50px;
+
+        h1 {
+            margin: 20px;
+            font-size: 3rem;
+        }
+
+        .add-newMember {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 103, 151, 0.596);
+            width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 80px;
+            margin-top: 80px;
+
+            p {
+                font-size: 3rem;
+                margin-bottom: 30px;
+            }
+
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                width: 90%;
 
 
+                .input-label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
 
+                    width: 80%;
+                    padding: 10px 0;
+
+                    label {
+                        font-size: 1.7rem;
+                    }
+
+                    input {
+                        width: 60%;
+                        border: none;
+                        background-color: transparent;
+                        color: wheat;
+                        border-bottom: 1px solid rgba(245, 245, 245, 0.424);
+                        text-align: center;
+                        padding: 5px 0
+                    }
+
+                    input:focus {
+                        outline: transparent;
+                        color: white;
+                    }
+
+                    .submitMember {
+                        width: 100%;
+                        border: 1px solid rgba(245, 245, 245, 0.424);
+                        margin-top: 50px;
+                        transition: .3s ease-in-out;
+                    }
+
+                    .submitMember:hover {
+                        width: 100%;
+                        background-color: wheat;
+                        border: 1px solid rgba(0, 103, 151, 0.596);
+                        color: rgba(0, 103, 151, 0.596);
+                        ;
+
+                    }
+
+                    ::placeholder {
+                        color: rgba(0, 103, 151, 0.719);
+                    }
+                }
+            }
+
+
+        }
+
+        table {
+            width: 90%;
+            height: 100%;
+            color: wheat;
+            background-color: rgb(33, 42, 47);
+            box-shadow: 0 0 .2rem .1rem rgba(245, 222, 179, 0.52);
+            padding: 20px;
+            border-radius: 5px;
+
+            tr {
+                transition: .1s linear;
+
+                th {
+                    border: 1px solid white;
+                    color: honeydew;
+                }
+
+                td {
+                    text-align: center;
+                    text-shadow: 0 0 2px rgb(139, 139, 139);
+                    border-top: 1px solid rgba(245, 222, 179, 0.507);
+                    border-bottom: 1px solid rgba(245, 222, 179, 0.507);
+
+                    button {
+                        color: honeydew;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .edit-btn {
+                        background-color: rgb(23, 114, 0);
+                    }
+
+                    .delete-btn {
+                        background-color: rgb(114, 9, 0);
+                    }
+                }
+
+                .action-btn {
+                    border: none;
+                }
+
+                td:nth-child(1) {
+                    border-left: 1px solid rgba(245, 222, 179, 0.507);
+                }
+
+                td:nth-child(5) {
+                    border-right: 1px solid rgba(245, 222, 179, 0.507);
+                }
+
+                .td-color {
+                    color: rgb(104, 104, 104);
+                }
+            }
+
+            tr:nth-of-type(1):hover {
+                background-color: transparent;
+            }
+
+            tr:hover {
+                background-color: rgba(0, 103, 151, 0.801);
+            }
+        }
+    }
 }

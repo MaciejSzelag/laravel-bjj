@@ -40,8 +40,86 @@
                </div>
             </div>
         </div>
-        <div class="h-s-wrap-block">
+
+    </div>
+    <div class="h-s-wrap-block">
+        <h1>Checkmat Plymouth</h1>
+        <div class="alert"></div>
+        <div class="add-newMember">
+            <p>Add new member</p>
             
+            <form action="/pages/admin/dashboard/newMemberAdded" method="post">
+                @csrf
+                <div class="input-label">
+                    <label for="">Name:</label>
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="input-label">
+                    <label for="">Surname:</label>
+                    <input type="text" name="lastName" placeholder="Surname" required>
+                </div>
+                <div class="input-label">
+                    <label for="">Level:</label>
+                    <input type="text" name="level" value="White" placeholder="Level" required>
+                </div>
+                <div class="input-label">
+                    <label for="">Date of birth:</label>
+                    <input type="text" name="DateOfBirth" placeholder="Date of birth" required>
+                </div>
+                <div class="input-label">
+                    <label for="">Start date:</label>
+                    <input type="text" name="DateOfStart" placeholder="Start date" >
+                </div>
+                <div class="input-label">
+                   
+                    <input type="submit" class="submitMember">
+                </div>
+              
+            </form>
+  
         </div>
+
+        <h1>Team members</h1>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Level</th>
+                <th>Start date</th>
+                <th>Date of Birth</th>
+                <th colspan="3">action</th>
+            </tr>
+            @foreach ($member as $mem)
+            <tr>
+                <td>
+                     {{$mem['name']}}
+                </td>
+                <td>
+                    {{$mem['lastName']}}
+                </td>
+                <td class="td-color" style="background-color:{{$mem['level']}}">
+                    {{$mem['level']}}
+                </td>
+                <td>
+                    {{$mem['DateOfStart']}}
+                </td>
+
+                <td>
+                    {{$mem['DateOfBirth']}}
+                </td>
+
+                <td class="action-btn"><button class="edit-btn">EDIT</button></td>
+                <td>
+                    {{$mem['updated_at']}}
+                </td>
+                <td class="action-btn"><button class="delete-btn">DELETE</button></td>
+           
+            </tr>
+            @endforeach 
+        </table>
+
+ 
+
     </div>
 </section>
