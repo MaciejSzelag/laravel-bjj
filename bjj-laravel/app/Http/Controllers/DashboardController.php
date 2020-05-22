@@ -23,8 +23,7 @@ class DashboardController extends Controller
         ]);
         TeamMember::create($request->all());
 
-        // return back()->with('status','A new member was added!');
-        return redirect("/dashboard")->with('status-mamber','A new member has been added!');;
+          return redirect("/dashboard")->with('status-mamber','A new member has been added!');;
     }
     public function deleteMember($id){
   
@@ -32,5 +31,22 @@ class DashboardController extends Controller
        $findIdMember->delete();
        return redirect("/dashboard")->with('status-mamber','A  member has been deleted!');
 
+    }
+    public function updateMember($id){
+
+        $findIdMember = TeamMember::find($id);
+        return view("/pages/admin/updateMember")->with('findIdMember',$findIdMember);
+
+    }
+
+    public function saveUpdate(Request $request, $id){
+        //    dd($request->all());
+        $findIdMember = TeamMember::find($id);
+
+        $findIdMember->findIdMember = $request->findIdMember;
+
+        $findIdMember->save();
+
+        return redirect('/dashboard')->with('status-mamber','A  member has been updated!');
     }
 }

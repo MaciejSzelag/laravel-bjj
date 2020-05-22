@@ -24,7 +24,14 @@ Route::get('/contactForm', 'ContactFormController@contactForm');
 Route::post('/contact', 'ContactFormController@mail');
 Route::get('/admin', 'AdminController@showAdmin');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
-Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMember');
+
 Route::get('/dashboard', 'DashboardController@dashboardPanel');
-Route::get('pages/admin/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
+//Route fo add new member do DB
+Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMember');
+//route for delete member
+Route::get('pages/admin/delete/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
+//route for update details about member
+Route::get('pages/admin/update/{id}', ['uses'=>'DashboardController@updateMember','as'=>'admin.updateMember']);
+Route::post('pages/admin/update/save/{id}', ['uses' => 'DashboardController@saveUpdate',
+'as'=>'admin.update.save.updateMember']);
 
