@@ -32,6 +32,6 @@ Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMemb
 Route::get('pages/admin/delete/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
 //route for update details about member
 Route::get('pages/admin/update/{id}', ['uses'=>'DashboardController@updateMember','as'=>'admin.updateMember']);
-Route::post('pages/admin/update/save/{id}', ['uses' => 'DashboardController@saveUpdate',
-'as'=>'admin.update.save.updateMember']);
+Route::post('pages/admin/update/{id}', ['uses' => 'DashboardController@saveUpdate',
+'as'=>'pages.admin.update']);
 

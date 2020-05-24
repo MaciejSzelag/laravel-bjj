@@ -123,9 +123,9 @@
                     {{$mem['DateOfBirth']}}
                 </td>
 
-                {{-- <td>
+                <td>
                     {{$mem['updated_at']}}
-                </td> --}}
+                </td>
                 
                 <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updateMember',['id'=> $mem['id']])}}">Update</a></button></td>
                  <td class="action-btn"><button class="delete-btn"><a href="{{route('admin.deleteMember',['id'=> $mem['id']])}}">Delete</a></button></td>

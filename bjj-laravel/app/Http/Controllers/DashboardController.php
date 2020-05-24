@@ -20,6 +20,7 @@ class DashboardController extends Controller
             "level"=> 'required',
             "DateOfBirth"=> 'required',
             "DateOfStart"=> 'required',
+         
         ]);
         TeamMember::create($request->all());
 
@@ -32,21 +33,23 @@ class DashboardController extends Controller
        return redirect("/dashboard")->with('status-mamber','A  member has been deleted!');
 
     }
-    public function updateMember($id){
 
+
+ 
+
+    public function updateMember($id){
         $findIdMember = TeamMember::find($id);
         return view("/pages/admin/updateMember")->with('findIdMember',$findIdMember);
-
     }
-
     public function saveUpdate(Request $request, $id){
-        //    dd($request->all());
+       
         $findIdMember = TeamMember::find($id);
-
-        $findIdMember->findIdMember = $request->findIdMember;
-
+        $findIdMember->name = $request->name ;
+        $findIdMember->lastName = $request->lastName ;
+        $findIdMember->DateOfBirth = $request->DateOfBirth ;
+        $findIdMember->level = $request->level ;
+        $findIdMember->DateOfStart = $request->DateOfStart ;
         $findIdMember->save();
-
         return redirect('/dashboard')->with('status-mamber','A  member has been updated!');
     }
 }

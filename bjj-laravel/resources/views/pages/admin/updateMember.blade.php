@@ -3,8 +3,8 @@
     <div class="h-s-wrap-block">
         <h1>Checkmat Plymouth</h1>
         <div class="add-newMember">
-            <p>Update</p>
-        <form action="{{route('admin.update.save.updateMember', ['id' => $findIdMember->id ])}}" method="post">
+            <p>Update the member</p>
+        <form action="{{route('pages.admin.update', ['id' => $findIdMember->id])}}" method="post">
                 @csrf 
                 <div class="input-label">
                     <label for="">Name:</label>

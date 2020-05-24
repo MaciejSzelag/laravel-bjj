@@ -3517,7 +3517,7 @@ html {
   width: 90%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 7px 20px 3px rgba(1, 27, 58, 0.753);
+  box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
   background-color: #1a2226;
   color: honeydew;
   padding: 20px;
@@ -3672,11 +3672,17 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr th {
-  border: 1px solid white;
-  color: honeydew;
+  background-color: rgba(0, 103, 151, 0.596);
+  color: #c4c4c4;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  box-shadow: inset 0 -5px 10px 1px rgba(0, 36, 77, 0.568);
+  border-radius: 10px 10px 0 0;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td {
+  background-color: honeydew;
+  color: grey;
   text-align: center;
   text-shadow: 0 0 2px #8b8b8b;
   border-top: 1px solid rgba(245, 222, 179, 0.507);
@@ -3700,7 +3706,7 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .edit-btn {
-  background-color: #177200;
+  background-color: #1f9b00;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .delete-btn {
