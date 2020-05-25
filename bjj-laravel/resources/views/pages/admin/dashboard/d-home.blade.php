@@ -4,13 +4,12 @@
         <div class="h-s-wrap-top">
             <div class="s1 reg-users">
                                <div class="s1-title">
-                     <h1>Registered users</h1>
+                     <h1>Team members</h1>
                 </div>
                 <div class="s1-details">
                     <div class="s1det">
-                        <p>Last week</p>
-                        <p>10</p>
-                    </div>
+                    <p>{{$length}}</p>
+                </div>
                </div>
             </div>
             <div class="s1 ">       
@@ -88,9 +87,30 @@
          
         </div>
 
-        <h1>Team members</h1>
+      
+ 
+   
 
         <table>
+            <caption><h1>Belts</h1></caption>
+            <tr>
+                <th>White</th>
+                <th>Blue</th>
+                <th>Purple</th>
+                <th>Brown</th>
+                <th>Black</th>
+            </tr>
+            <tr>
+                <td>{{$whiteBelts}}</td>
+                <td>{{$blueBelts}}</td>
+                <td>{{$purpleBelts}}</td>
+                <td>{{$brownBelts}}</td>
+                <td>{{$blackBelts}}</td>
+            </tr>
+        </table>
+
+        <table>
+            <caption>  <h1>Team members (<span>{{$length}}</span>)</h1></caption>
             <tr>
                 <th>Name</th>
                 <th>Surname</th>
@@ -105,7 +125,7 @@
             
             @foreach ($member as $mem)
      
-            <tr>
+            <tr class="tr-length">
                 <td>
                      {{$mem['name']}}
                 </td>

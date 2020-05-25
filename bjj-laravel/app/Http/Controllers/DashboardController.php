@@ -8,10 +8,32 @@ use App\TeamMember;
 class DashboardController extends Controller
 {
      public function dashboardPanel(){
-        $title = 'Dashboard |  Ian';
+        $title = 'Content Management System';
         $member = TeamMember::all()->toArray();
-        return view('pages.admin.dashboard', compact('title', 'member'));
+        $length = TeamMember::count();
+        $whiteBelts = TeamMember::where('level','white')->count();;
+        $blueBelts = TeamMember::where('level','blue')->count();;
+        $purpleBelts = TeamMember::where('level','purple')->count();;
+        $brownBelts = TeamMember::where('level','brown')->count();;
+        $blackBelts = TeamMember::where('level','black')->count();;
+      
+ 
+
+        return view('pages.admin.dashboard', compact('title','member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts'));
     }
+
+    // public function counerMember(){
+    //     $member = TeamMember::all()->toArray();
+    //     $length = TeamMember::count();
+    //     $whiteBelts = TeamMember::where('level','white')->count();;
+    //     $blueBelts = TeamMember::where('level','blue')->count();;
+    //     $purpleBelts = TeamMember::where('level','purple')->count();;
+    //     $brownBelts = TeamMember::where('level','brown')->count();;
+    //     $blackBelts = TeamMember::where('level','black')->count();;
+    //     return view('pages.admin.dashboard', compact( 'member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts'));
+
+    // }
+
     public function addMember(Request $request){
 
         $request->validate([
@@ -20,7 +42,6 @@ class DashboardController extends Controller
             "level"=> 'required',
             "DateOfBirth"=> 'required',
             "DateOfStart"=> 'required',
-         
         ]);
         TeamMember::create($request->all());
 
@@ -34,15 +55,12 @@ class DashboardController extends Controller
 
     }
 
-
- 
-
     public function updateMember($id){
         $findIdMember = TeamMember::find($id);
+      
         return view("/pages/admin/updateMember")->with('findIdMember',$findIdMember);
     }
     public function saveUpdate(Request $request, $id){
-       
         $findIdMember = TeamMember::find($id);
         $findIdMember->name = $request->name ;
         $findIdMember->lastName = $request->lastName ;

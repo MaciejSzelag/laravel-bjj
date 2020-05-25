@@ -34,7 +34,16 @@ for (let i = 0; i < blocks.length; i++) {
 
 const closeAlert = document.getElementById("closeAlert");
 const alertMember = document.getElementById("alertMember");
+
 closeAlert.addEventListener('click', () => {
     alertMember.classList.add("alertMember")
     console.log("clicked")
 })
+const trLength = document.querySelectorAll('.tr-length');
+const teamMemberCounter = document.querySelectorAll(".teamMemberCounter");
+for (let i = 0; i < teamMemberCounter.length; i++) {
+    teamMemberCounter[i].textContent = trLength.length;
+}
+
+
+// teamMemberCounter.textContent = trLength.length;

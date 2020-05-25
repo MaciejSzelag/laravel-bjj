@@ -25,7 +25,9 @@ Route::post('/contact', 'ContactFormController@mail');
 Route::get('/admin', 'AdminController@showAdmin');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
 
+
 Route::get('/dashboard', 'DashboardController@dashboardPanel');
+// Route::get('pages.admin.dashboard', 'DashboardController@counerMember');
 //Route fo add new member do DB
 Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMember');
 //route for delete member

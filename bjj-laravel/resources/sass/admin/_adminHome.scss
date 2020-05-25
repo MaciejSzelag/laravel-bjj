@@ -17,7 +17,7 @@ $sideSpace: 20px;
         width: 90%;
         height: 300px;
         border-radius: 5px;
-        box-shadow: 0 7px 20px 3px rgba(0, 36, 77, 0.753);
+        box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
         background-color: rgb(26, 34, 38);
 
         .h-s-wrap-top {
@@ -108,6 +108,10 @@ $sideSpace: 20px;
         h1 {
             margin: 20px;
             font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 2rem;
         }
 
         .alert {
@@ -252,9 +256,11 @@ $sideSpace: 20px;
             box-shadow: 0 0 .2rem .1rem rgba(245, 222, 179, 0.52);
             padding: 20px;
             border-radius: 5px;
+            margin-bottom: 3rem;
 
             tr {
                 transition: .1s linear;
+                background-color: honeydew;
 
                 th {
                     background-color: rgba(0, 103, 151, 0.596);
@@ -266,7 +272,7 @@ $sideSpace: 20px;
                 }
 
                 td {
-                    background-color: honeydew;
+
                     color: grey;
                     text-align: center;
                     text-shadow: 0 0 2px rgb(139, 139, 139);
@@ -287,14 +293,23 @@ $sideSpace: 20px;
                             text-decoration: none;
                             color: whitesmoke;
                         }
+
                     }
 
                     .edit-btn {
                         background-color: rgb(31, 155, 0);
                     }
 
+                    .edit-btn:hover {
+                        background-color: rgba(31, 155, 0, 0.753);
+                    }
+
                     .delete-btn {
                         background-color: rgb(114, 9, 0);
+                    }
+
+                    .delete-btn:hover {
+                        background-color: rgba(114, 9, 0, 0.753);
                     }
                 }
 
@@ -313,14 +328,23 @@ $sideSpace: 20px;
                 .td-color {
                     color: rgb(104, 104, 104);
                 }
+
+
+
+            }
+
+            tr:nth-of-type(1) {
+                background-color: transparent;
+
             }
 
             tr:nth-of-type(1):hover {
                 background-color: transparent;
+
             }
 
             tr:hover {
-                background-color: rgba(0, 103, 151, 0.801);
+                background-color: rgb(177, 220, 255);
             }
         }
     }

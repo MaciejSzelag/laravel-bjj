@@ -3439,7 +3439,7 @@ html {
   width: 90%;
   height: 300px;
   border-radius: 5px;
-  box-shadow: 0 7px 20px 3px rgba(0, 36, 77, 0.753);
+  box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
   background-color: #1a2226;
 }
 
@@ -3528,6 +3528,10 @@ html {
 .dashboard-home-wrap .h-s-wrap-block h1 {
   margin: 20px;
   font-size: 3rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block h3 {
+  font-size: 2rem;
 }
 
 .dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member {
@@ -3665,10 +3669,12 @@ html {
   box-shadow: 0 0 0.2rem 0.1rem rgba(245, 222, 179, 0.52);
   padding: 20px;
   border-radius: 5px;
+  margin-bottom: 3rem;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr {
   transition: 0.1s linear;
+  background-color: honeydew;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr th {
@@ -3681,7 +3687,6 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td {
-  background-color: honeydew;
   color: grey;
   text-align: center;
   text-shadow: 0 0 2px #8b8b8b;
@@ -3709,8 +3714,16 @@ html {
   background-color: #1f9b00;
 }
 
+.dashboard-home-wrap .h-s-wrap-block table tr td .edit-btn:hover {
+  background-color: rgba(31, 155, 0, 0.753);
+}
+
 .dashboard-home-wrap .h-s-wrap-block table tr td .delete-btn {
   background-color: #720900;
+}
+
+.dashboard-home-wrap .h-s-wrap-block table tr td .delete-btn:hover {
+  background-color: rgba(114, 9, 0, 0.753);
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr .action-btn {
@@ -3729,12 +3742,16 @@ html {
   color: #686868;
 }
 
+.dashboard-home-wrap .h-s-wrap-block table tr:nth-of-type(1) {
+  background-color: transparent;
+}
+
 .dashboard-home-wrap .h-s-wrap-block table tr:nth-of-type(1):hover {
   background-color: transparent;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr:hover {
-  background-color: rgba(0, 103, 151, 0.801);
+  background-color: #b1dcff;
 }
 
 footer {
