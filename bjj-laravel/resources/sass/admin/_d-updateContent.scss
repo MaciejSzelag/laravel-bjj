@@ -72,7 +72,7 @@
                         margin-bottom: 3rem;
 
                         tr {
-                            background-color: rgb(205, 241, 255);
+                            background-color: rgb(253, 253, 253);
                             margin: 10px;
 
                             th {
@@ -114,8 +114,6 @@
                                 .edit-btn:hover {
                                     background-color: rgba(40, 202, 0, 0.753);
                                 }
-
-
                             }
 
                             .action-btn {
@@ -127,10 +125,6 @@
                                 border-left: 1px solid rgba(245, 222, 179, 0.507);
                             }
 
-                            td:nth-child(5) {
-                                border-right: 1px solid rgba(245, 222, 179, 0.507);
-                            }
-
                             .td-color {
                                 color: rgb(104, 104, 104);
                             }
@@ -140,8 +134,9 @@
                             background-color: transparent;
                         }
 
-                        tr:nth-of-type(4) {
-
+                        .tr-priv:nth-of-type(3),
+                        .tr-main:nth-of-type(4),
+                        .tr-kids:nth-of-type(3) {
                             background-image: linear-gradient(rgba(200, 123, 75, 0.452), rgba(235, 104, 78, 0.452));
                         }
 
@@ -150,7 +145,7 @@
                         }
 
                         tr:hover {
-                            background-color: rgb(177, 220, 255);
+                            background-color: rgb(215, 253, 198);
                         }
                     }
 

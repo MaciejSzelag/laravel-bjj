@@ -34,11 +34,22 @@ Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMemb
 Route::get('pages/admin/delete/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
 //route for update details about member
 Route::get('pages/admin/update/{id}', ['uses'=>'DashboardController@updateMember','as'=>'admin.updateMember']);
-Route::post('pages/admin/update/{id}', ['uses' => 'DashboardController@saveUpdate',
+Route::post('pages/admin/updateMember/{id}', ['uses' => 'DashboardController@saveUpdate',
 'as'=>'pages.admin.update']);
 
-//update for plans
-Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardController@updateAdultPrice','as'=>'admin.updatePrices']);
-Route::post('pages/admin/update/{id}', ['uses' => 'DashboardController@saveUpdatePlan',
+//route update for plans adults
+Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardPriceController@updateAdultPrice','as'=>'admin.updatePrices']);
+
+Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@saveUpdatePlan',
 'as'=>'pages.admin.updatePlans']);
 
+//route update for plans private
+Route::get('pages/admin/updatePrivate/{id}', ['uses'=>'DashboardPriceController@updatePrivatePrice','as'=>'admin.updatePrivatePlan']);
+
+Route::post('pages/admin/updatePrivate/{id}', ['uses' => 'DashboardPriceController@saveUpdatePrivatePlan',
+'as'=>'pages.admin.updatePrivate']);
+
+//route update for plans kids
+Route::get('pages/admin/updateKids/{id}', ['uses'=>'DashboardPriceController@updateKidsPrice','as'=>'admin.updateKidsPlan']);
+Route::post('pages/admin/updateKids/{id}', ['uses' => 'DashboardPriceController@saveUpdateKidsPlan',
+'as'=>'pages.admin.updateKids']);

@@ -22,7 +22,7 @@
 
               
                          @foreach ($prices as $price)
-                        <tr>
+                        <tr class="tr-main">
                             <td>
                                 {{$price['planName']}}
                             </td>
@@ -63,23 +63,23 @@
                         </tr>
 
               
-                         @foreach ($prices as $price)
-                        <tr>
+                         @foreach ($privatePrices as $privPrice)
+                        <tr class="tr-priv">
                             <td>
-                                {{$price['planName']}}
+                                {{$privPrice['planName']}}
                             </td>
                             <td>
-                                {{$price['description']}}
+                                {{$privPrice['description']}}
                             </td>
                             <td>
-                               £{{$price['price']}}
+                               £{{$privPrice['price']}}
                             </td>
                             <td>
-                                {{$price['frenquency']}}
+                                {{$privPrice['frenquency']}}
                             </td>
-                            <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updatePrices',['id'=> $price['id']])}}">Update</a></button></td>
+                            <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updatePrivatePlan',['id'=> $privPrice['id']])}}">Update</a></button></td>
                             <td>
-                                {{$price['updated_at']}}
+                                {{$privPrice['updated_at']}}
                             </td>
                                 
                         </tr>
@@ -103,23 +103,23 @@
                         </tr>
 
               
-                         @foreach ($prices as $price)
-                        <tr>
+                         @foreach ($kidsPrice as $kid)
+                        <tr class="tr-kids">
                             <td>
-                                {{$price['planName']}}
+                                {{$kid['planName']}}
                             </td>
                             <td>
-                                {{$price['description']}}
+                                {{$kid['description']}}
                             </td>
                             <td>
-                               £{{$price['price']}}
+                               £{{$kid['price']}}
                             </td>
                             <td>
-                                {{$price['frenquency']}}
+                                {{$kid['frenquency']}}
                             </td>
-                            <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updatePrices',['id'=> $price['id']])}}">Update</a></button></td>
+                            <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updateKidsPlan',['id'=> $kid['id']])}}">Update</a></button></td>
                             <td>
-                                {{$price['updated_at']}}
+                                {{$kid['updated_at']}}
                             </td>
                                 
                         </tr>

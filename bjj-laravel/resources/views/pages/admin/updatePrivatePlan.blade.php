@@ -3,8 +3,8 @@
     <div class="h-s-wrap-block">
         <h1>Updates</h1>
         <div class="add-newMember">
-            <p>Update adults and juniors plan</p>
-        <form action="{{route('pages.admin.updatePlans', ['id' => $findIdMember->id])}}" method="post">
+            <p>Update private plan</p>
+        <form action="{{route('pages.admin.updatePrivate', ['id' => $findIdMember->id])}}" method="post">
                 @csrf 
                 <div class="input-label">
                     <label for="">Plan Name:</label>

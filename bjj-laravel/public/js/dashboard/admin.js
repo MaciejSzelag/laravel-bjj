@@ -36,8 +36,15 @@ const closeAlert = document.getElementById("closeAlert");
 const alertMember = document.getElementById("alertMember");
 
 closeAlert.addEventListener('click', () => {
-    alertMember.classList.add("alertMember")
-    console.log("clicked")
+    alertMember.style.setProperty('opacity', 0);
+    
+    setTimeout(() => {
+
+        alertMember.classList.add("alertMember")
+
+    }, 700)
+
+
 })
 const trLength = document.querySelectorAll('.tr-length');
 const teamMemberCounter = document.querySelectorAll(".teamMemberCounter");

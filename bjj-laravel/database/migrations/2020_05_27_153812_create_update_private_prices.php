@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUpdatePrice extends Migration
+class CreateUpdatePrivatePrices extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUpdatePrice extends Migration
      */
     public function up()
     {
-        Schema::create('update_price', function (Blueprint $table) {
+        Schema::create('update_private_prices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("planName");
             $table->string("description");
@@ -30,6 +30,6 @@ class CreateUpdatePrice extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('update_price');
+        Schema::dropIfExists('update_private_prices');
     }
 }

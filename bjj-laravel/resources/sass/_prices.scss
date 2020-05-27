@@ -132,7 +132,9 @@
                     }
                 }
 
-                .card:nth-of-type(3) {
+                .card-main:nth-of-type(3),
+                .card-priv:nth-of-type(2),
+                .card-kids:nth-of-type(2) {
                     transform: scale(1.2);
                     background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));
 
@@ -145,10 +147,7 @@
                     }
                 }
 
-                // .cardPriv:nth-of-type(2) {
 
-                //     background-image: linear-gradient(rgba(200, 123, 75, 0.452), rgba(235, 104, 78, 0.452));
-                // }
 
                 .popularCard {
                     transform: scale(1.2);
