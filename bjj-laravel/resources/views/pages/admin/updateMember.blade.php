@@ -20,7 +20,7 @@
                 </div>
                 <div class="input-label">
                     <label for="">Level:</label>
-                    <input type="text" name="level" placeholder="Level"  value="{{ $findIdMember->level }}">
+                    <input type="text" name="level" placeholder="Level"  value="{{ $findIdMember->level }}" autofocus>
                 </div>
             
                 <div class="input-label">

@@ -13,7 +13,6 @@ $sideSpace: 20px;
     padding: 80px 0;
 
     .home-statistics {
-
         width: 90%;
         height: 300px;
         border-radius: 5px;
@@ -115,8 +114,6 @@ $sideSpace: 20px;
         }
 
         .alert {
-
-
             .alert-success-member {
                 position: relative;
                 display: flex;
@@ -131,7 +128,6 @@ $sideSpace: 20px;
                 border-radius: 10px;
                 font-size: 2rem;
 
-
                 span {
                     display: flex;
                     justify-content: center;
@@ -141,24 +137,17 @@ $sideSpace: 20px;
                     right: 0;
                     width: auto;
                     height: auto;
-                    // border: 1px solid white;
                     color: white;
-                    // border-radius: 2px;
-                    // border-bottom-left-radius: 50%;
                     background-color: transparent;
                     font-size: 1.5rem;
                     padding: 2px 20px 3px;
-                    transition: .3s ease-in-out;
-
-
+                    transition: 0.3s ease-in-out;
+                    cursor: pointer;
                 }
 
                 span:hover {
-
                     color: green;
                 }
-
-
             }
 
             .alertMember {
@@ -183,15 +172,12 @@ $sideSpace: 20px;
                 margin-bottom: 30px;
             }
 
-
-
             form {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: column;
                 width: 90%;
-
 
                 .input-label {
                     display: flex;
@@ -204,6 +190,11 @@ $sideSpace: 20px;
 
                     label {
                         font-size: 1.7rem;
+
+                        sup {
+                            color: red;
+                            margin-left: 5px;
+                        }
                     }
 
                     input {
@@ -213,7 +204,7 @@ $sideSpace: 20px;
                         color: wheat;
                         border-bottom: 1px solid rgba(245, 245, 245, 0.424);
                         text-align: center;
-                        padding: 5px 0
+                        padding: 5px 0;
                     }
 
                     input:focus {
@@ -225,7 +216,7 @@ $sideSpace: 20px;
                         width: 100%;
                         border: 1px solid rgba(245, 245, 245, 0.424);
                         margin-top: 50px;
-                        transition: .3s ease-in-out;
+                        transition: 0.3s ease-in-out;
                     }
 
                     .submitMember:hover {
@@ -233,56 +224,49 @@ $sideSpace: 20px;
                         background-color: wheat;
                         border: 1px solid rgba(0, 103, 151, 0.596);
                         color: rgba(0, 103, 151, 0.596);
-                        ;
-
                     }
 
                     ::placeholder {
                         color: rgba(0, 103, 151, 0.719);
                     }
                 }
-
-
             }
-
-
         }
 
         table {
             width: 90%;
             height: 100%;
-            color: wheat;
+            color: honeydew;
             background-color: rgb(33, 42, 47);
-            box-shadow: 0 0 .2rem .1rem rgba(245, 222, 179, 0.52);
+            box-shadow: 0 0 0.2rem 0.1rem rgba(240, 255, 240, 0.308);
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 3rem;
 
             tr {
-                transition: .1s linear;
-                background-color: honeydew;
+                background-color: rgb(205, 241, 255);
+                margin: 10px;
 
                 th {
                     background-color: rgba(0, 103, 151, 0.596);
                     color: rgb(196, 196, 196);
-                    font-size: 1.8rem;
+                    font-size: 1.9rem;
                     letter-spacing: 2px;
-                    box-shadow: inset 0 -5px 10px 1px rgba(0, 36, 77, 0.568);
+
                     border-radius: 10px 10px 0 0;
+                    padding: 10px 0;
                 }
 
                 td {
-
                     color: grey;
                     text-align: center;
-                    text-shadow: 0 0 2px rgb(139, 139, 139);
-                    border-top: 1px solid rgba(245, 222, 179, 0.507);
-                    border-bottom: 1px solid rgba(245, 222, 179, 0.507);
+                    padding: 5px 0;
 
                     button {
                         color: honeydew;
                         width: 100%;
                         height: 100%;
+                        border: none;
 
                         a {
                             display: flex;
@@ -293,7 +277,6 @@ $sideSpace: 20px;
                             text-decoration: none;
                             color: whitesmoke;
                         }
-
                     }
 
                     .edit-btn {
@@ -301,7 +284,7 @@ $sideSpace: 20px;
                     }
 
                     .edit-btn:hover {
-                        background-color: rgba(31, 155, 0, 0.753);
+                        background-color: rgba(40, 202, 0, 0.753);
                     }
 
                     .delete-btn {
@@ -309,12 +292,13 @@ $sideSpace: 20px;
                     }
 
                     .delete-btn:hover {
-                        background-color: rgba(114, 9, 0, 0.753);
+                        background-color: rgba(150, 12, 0, 0.753);
                     }
                 }
 
                 .action-btn {
                     border: none;
+                    padding: 0;
                 }
 
                 td:nth-child(1) {
@@ -328,19 +312,14 @@ $sideSpace: 20px;
                 .td-color {
                     color: rgb(104, 104, 104);
                 }
-
-
-
             }
 
             tr:nth-of-type(1) {
                 background-color: transparent;
-
             }
 
             tr:nth-of-type(1):hover {
                 background-color: transparent;
-
             }
 
             tr:hover {

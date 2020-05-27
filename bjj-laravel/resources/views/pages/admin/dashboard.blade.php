@@ -22,7 +22,7 @@
 
 </aside>
 <section class="admin-content">
-    <section class="adminPanel home boardActive">
+   <section class="adminPanel home boardActive">  {{--   boardActive --}}
         @include('/pages/admin/dashboard/d-home')
     </section>
     <section class="adminPanel price ">

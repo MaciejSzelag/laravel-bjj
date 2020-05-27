@@ -37,3 +37,8 @@ Route::get('pages/admin/update/{id}', ['uses'=>'DashboardController@updateMember
 Route::post('pages/admin/update/{id}', ['uses' => 'DashboardController@saveUpdate',
 'as'=>'pages.admin.update']);
 
+//update for plans
+Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardController@updateAdultPrice','as'=>'admin.updatePrices']);
+Route::post('pages/admin/update/{id}', ['uses' => 'DashboardController@saveUpdatePlan',
+'as'=>'pages.admin.updatePlans']);
+

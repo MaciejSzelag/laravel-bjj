@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TeamMember;
+use App\UpdatePrice;
 
 class DashboardController extends Controller
 {
@@ -16,25 +17,11 @@ class DashboardController extends Controller
         $purpleBelts = TeamMember::where('level','purple')->count();;
         $brownBelts = TeamMember::where('level','brown')->count();;
         $blackBelts = TeamMember::where('level','black')->count();;
-      
- 
-
-        return view('pages.admin.dashboard', compact('title','member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts'));
+        $prices = UpdatePrice::all()->toArray();
+        return view('pages.admin.dashboard', compact('title','member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts','prices'));
     }
 
-    // public function counerMember(){
-    //     $member = TeamMember::all()->toArray();
-    //     $length = TeamMember::count();
-    //     $whiteBelts = TeamMember::where('level','white')->count();;
-    //     $blueBelts = TeamMember::where('level','blue')->count();;
-    //     $purpleBelts = TeamMember::where('level','purple')->count();;
-    //     $brownBelts = TeamMember::where('level','brown')->count();;
-    //     $blackBelts = TeamMember::where('level','black')->count();;
-    //     return view('pages.admin.dashboard', compact( 'member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts'));
-
-    // }
-
-    public function addMember(Request $request){
+     public function addMember(Request $request){
 
         $request->validate([
             "name"=> 'required',
@@ -69,5 +56,19 @@ class DashboardController extends Controller
         $findIdMember->DateOfStart = $request->DateOfStart ;
         $findIdMember->save();
         return redirect('/dashboard')->with('status-mamber','A  member has been updated!');
+    }
+    public function updateAdultPrice($id){
+        $findIdMember = UpdatePrice::find($id);
+      
+        return view("/pages/admin/updatePrices")->with('findIdMember',$findIdMember);
+    }
+    public function saveUpdatePlan(Request $request, $id){
+        $findIdMember = UpdatePrice::find($id);
+        $findIdMember->planName = $request->planName ;
+        $findIdMember->description = $request->description ;
+        $findIdMember->price = $request->price ;
+        $findIdMember->frenquency = $request->frenquency ;
+        $findIdMember->save();
+        return redirect('/dashboard')->with('status-mamber','Plan has been changed');
     }
 }

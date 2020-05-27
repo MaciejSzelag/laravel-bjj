@@ -1909,7 +1909,7 @@ html {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .timetable-wrap .timetable-wrap_container .t-title {
@@ -1921,6 +1921,7 @@ html {
 .timetable-wrap .timetable-wrap_container .container_t,
 .timetable-wrap .timetable-wrap_container .container_info {
   width: 100%;
+  height: auto;
 }
 
 .timetable-wrap .timetable-wrap_container .container_t {
@@ -1928,7 +1929,6 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: auto;
   padding: 100px 50px;
 }
 
@@ -3563,6 +3563,7 @@ html {
   font-size: 1.5rem;
   padding: 2px 20px 3px;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member span:hover {
@@ -3610,6 +3611,11 @@ html {
 
 .dashboard-home-wrap .h-s-wrap-block .add-newMember form .input-label label {
   font-size: 1.7rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .add-newMember form .input-label label sup {
+  color: red;
+  margin-left: 5px;
 }
 
 .dashboard-home-wrap .h-s-wrap-block .add-newMember form .input-label input {
@@ -3664,40 +3670,39 @@ html {
 .dashboard-home-wrap .h-s-wrap-block table {
   width: 90%;
   height: 100%;
-  color: wheat;
+  color: honeydew;
   background-color: #212a2f;
-  box-shadow: 0 0 0.2rem 0.1rem rgba(245, 222, 179, 0.52);
+  box-shadow: 0 0 0.2rem 0.1rem rgba(240, 255, 240, 0.308);
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 3rem;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr {
-  transition: 0.1s linear;
-  background-color: honeydew;
+  background-color: #cdf1ff;
+  margin: 10px;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr th {
   background-color: rgba(0, 103, 151, 0.596);
   color: #c4c4c4;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   letter-spacing: 2px;
-  box-shadow: inset 0 -5px 10px 1px rgba(0, 36, 77, 0.568);
   border-radius: 10px 10px 0 0;
+  padding: 10px 0;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td {
   color: grey;
   text-align: center;
-  text-shadow: 0 0 2px #8b8b8b;
-  border-top: 1px solid rgba(245, 222, 179, 0.507);
-  border-bottom: 1px solid rgba(245, 222, 179, 0.507);
+  padding: 5px 0;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td button {
   color: honeydew;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td button a {
@@ -3715,7 +3720,7 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .edit-btn:hover {
-  background-color: rgba(31, 155, 0, 0.753);
+  background-color: rgba(40, 202, 0, 0.753);
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .delete-btn {
@@ -3723,11 +3728,12 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td .delete-btn:hover {
-  background-color: rgba(114, 9, 0, 0.753);
+  background-color: rgba(150, 12, 0, 0.753);
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr .action-btn {
   border: none;
+  padding: 0;
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr td:nth-child(1) {
@@ -3751,6 +3757,140 @@ html {
 }
 
 .dashboard-home-wrap .h-s-wrap-block table tr:hover {
+  background-color: #b1dcff;
+}
+
+.d-updateContent {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.d-updateContent .update_content_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.d-updateContent .update_content_wrap .form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #212a2f;
+  color: honeydew;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .h1-price {
+  margin: 10px;
+  font-size: 3rem;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .h2-price {
+  margin: 15px 0 20px;
+  font-size: 2rem;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table {
+  width: 95%;
+  height: 100%;
+  color: honeydew;
+  box-shadow: 0 0 0.2rem 0.1rem rgba(240, 255, 240, 0.308);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr {
+  background-color: #cdf1ff;
+  margin: 10px;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr th {
+  background-color: rgba(0, 103, 151, 0.596);
+  color: #c4c4c4;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 0;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td {
+  color: grey;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td button {
+  color: honeydew;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td .edit-btn {
+  background-color: #1f9b00;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td .edit-btn:hover {
+  background-color: rgba(40, 202, 0, 0.753);
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr .action-btn {
+  border: none;
+  padding: 0;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td:nth-child(1) {
+  border-left: 1px solid rgba(245, 222, 179, 0.507);
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr td:nth-child(5) {
+  border-right: 1px solid rgba(245, 222, 179, 0.507);
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr .td-color {
+  color: #686868;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:nth-of-type(1) {
+  background-color: transparent;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:nth-of-type(1):hover {
+  background-color: transparent;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:hover {
   background-color: #b1dcff;
 }
 

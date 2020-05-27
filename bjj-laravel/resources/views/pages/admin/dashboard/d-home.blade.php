@@ -58,39 +58,38 @@
             <form action="/pages/admin/dashboard/newMemberAdded" method="post">
                 @csrf
                 <div class="input-label">
-                    <label for="">Name:</label>
-                    <input type="text" name="name" placeholder="Name" required>
+                    <label for="">Name:<sup>*</sup></label>
+                    <input type="text" name="name" placeholder="Name" required maxlength="50"  title="Name">
                 </div>
                 <div class="input-label">
-                    <label for="">Surname:</label>
-                    <input type="text" name="lastName" placeholder="Surname" required>
+                    <label for="">Surname:<sup>*</sup></label>
+                    <input type="text" name="lastName" placeholder="Surname" required maxlength="50" title="Surname">
                 </div>
                 <div class="input-label">
-                    <label for="">Level:</label>
-                    <input type="text" name="level" value="White" placeholder="Level" required>
+                    <label for="">Level:<sup>*</sup></label>
+                    <input type="text" name="level" value="White" placeholder="Level" required >
+                    <datalist id="color-belts">
+                        <option value="white">
+                        <option value="blue">
+                        <option value="purple">
+                        <option value="brown">
+                        <option value="black">
+                      </datalist>
                 </div>
                 <div class="input-label">
-                    <label for="">Date of birth:</label>
-                    <input type="text" name="DateOfBirth" placeholder="Date of birth" required>
+                    <label for="">Date of birth:<sup>*</sup></label>
+                    <input type="date" name="DateOfBirth" placeholder="Date of birth" required maxlength="8" >
                 </div>
                 <div class="input-label">
-                    <label for="">Start date:</label>
-                    <input type="text" name="DateOfStart" placeholder="Start date" >
+                    <label for="">Start date:<sup>*</sup></label>
+                    <input type="date" name="DateOfStart" placeholder="Start date" required maxlength="8">
                 </div>
                 <div class="input-label">
                    
                     <input type="submit" class="submitMember">
                 </div>
-
-              
             </form>
-         
         </div>
-
-      
- 
-   
-
         <table>
             <caption><h1>Belts</h1></caption>
             <tr>
@@ -132,7 +131,7 @@
                 <td>
                     {{$mem['lastName']}}
                 </td>
-                <td class="td-color" style="background-color:{{$mem['level']}}">
+                <td class="td-color" style="border-left: 10px solid {{$mem['level']}} ">
                     {{$mem['level']}}
                 </td>
                 <td>

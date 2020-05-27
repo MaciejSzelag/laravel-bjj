@@ -55,49 +55,22 @@
             <div class="p_container_title">
                 <p class="title-price">Adults and Juniors (age 12+)</p>
             </div>
+          
             <div class="price_cards">
+                @foreach ($prices as $price)
                 <div class="card">
                     <div class="topCard ">
-                        <p class="card-title ">Plan 1</p>
+                        <p class="card-title ">  
+                            {{$price['planName']}}
+                        </p>
                     </div>
-                    <p>2 Classes a Week</p>
-                    <p class="cardPrice"> £40</p>
-                    <p>Monthly</p>
+                    <p>{{$price['description']}}</p>
+                    <p class="cardPrice"> £{{$price['price']}}</p>
+                    <p>{{$price['frenquency']}}</p>
                 </div>
-                <div class="card">
-                    <div class="topCard">
-                        <p class="card-title ">Plan 2</p>
-                    </div>
-                    <p>3 Classes a Week</p>
-                    <p class="cardPrice"> £50</p>
-                    <p>Monthly</p>
-                </div>
-                <div class="card popularCard">
-                    <div class="topCard ">
-                        <p class="card-title ">Plan 3</p>
-                    </div>
-                    <p>Unlimited</p>
-                    <p class="cardPrice"> £60</p>
-                    <p>Monthly</p>
-                </div>
-                <div class="card">
-                    <div class="topCard ">
-                        <p class="card-title ">Plan 4</p>
-                    </div>
-                    <p>Block of 10</p>
-                    <p class="cardPrice"> £60</p>
-                    <p> Every £10 Sessions</p>
-                </div>
-                <div class="card">
-                    <div class="topCard ">
-                        <p class="card-title ">Plan 5</p>
-                    </div>
-                    <p>1 Class</p>
-                    <p class="cardPrice"> £8</p>
-                    <p>Each Class</p>
-                </div>
-
+                @endforeach 
             </div>
+        
         </div>
         <div class="price_kids price_small_container">
             <div class="p_container_title">
