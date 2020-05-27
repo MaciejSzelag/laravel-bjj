@@ -10,6 +10,7 @@ const d_about = document.querySelector(".admin-content .about");
 activeBlock(blocks, "active");
 for (let i = 0; i < blocks.length; i++) {
     blocks[i].addEventListener("click", function () {
+        window.scrollTo(0, 0)
         for (let j = 0; j < adminPanels.length; j++) {
             adminPanels[j].classList.remove("boardActive")
             if (blocks[i].classList.contains("Home")) {
@@ -37,7 +38,7 @@ const alertMember = document.getElementById("alertMember");
 
 closeAlert.addEventListener('click', () => {
     alertMember.style.setProperty('opacity', 0);
-    
+
     setTimeout(() => {
 
         alertMember.classList.add("alertMember")
@@ -46,11 +47,11 @@ closeAlert.addEventListener('click', () => {
 
 
 })
-const trLength = document.querySelectorAll('.tr-length');
-const teamMemberCounter = document.querySelectorAll(".teamMemberCounter");
-for (let i = 0; i < teamMemberCounter.length; i++) {
-    teamMemberCounter[i].textContent = trLength.length;
-}
+// const trLength = document.querySelectorAll('.tr-length');
+// const teamMemberCounter = document.querySelectorAll(".teamMemberCounter");
+// for (let i = 0; i < teamMemberCounter.length; i++) {
+//     teamMemberCounter[i].textContent = trLength.length;
+// }
 
 
 // teamMemberCounter.textContent = trLength.length;
