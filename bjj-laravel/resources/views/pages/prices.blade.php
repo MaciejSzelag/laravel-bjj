@@ -22,7 +22,7 @@
                     <p class="cardPrice"> £40</p>
                     <p>Privet Session</p>
                 </div>
-                <div class="card popularCard">
+                <div class="card cardPriv ">
                     <div class="topCard">
                         <p class="card-title ">Block of 5</p>
                     </div>
@@ -64,7 +64,7 @@
                             {{$price['planName']}}
                         </p>
                     </div>
-                    <p>{{$price['description']}}</p>
+                    <p class="plan-description">{{$price['description']}}</p>
                     <p class="cardPrice"> £{{$price['price']}}</p>
                     <p>{{$price['frenquency']}}</p>
                 </div>

@@ -132,6 +132,24 @@
                     }
                 }
 
+                .card:nth-of-type(3) {
+                    transform: scale(1.2);
+                    background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));
+
+                    .plan-description {
+                        font-size: 3rem;
+                    }
+
+                    .cardPrice {
+                        font-size: 3rem;
+                    }
+                }
+
+                // .cardPriv:nth-of-type(2) {
+
+                //     background-image: linear-gradient(rgba(200, 123, 75, 0.452), rgba(235, 104, 78, 0.452));
+                // }
+
                 .popularCard {
                     transform: scale(1.2);
                     background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));

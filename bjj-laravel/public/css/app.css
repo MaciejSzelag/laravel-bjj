@@ -2374,6 +2374,19 @@ html {
   font-size: 1.8rem;
 }
 
+.price-wrap .price-container .price_small_container .price_cards .card:nth-of-type(3) {
+  transform: scale(1.2);
+  background-image: linear-gradient(#c87b4b, #eb684e);
+}
+
+.price-wrap .price-container .price_small_container .price_cards .card:nth-of-type(3) .plan-description {
+  font-size: 3rem;
+}
+
+.price-wrap .price-container .price_small_container .price_cards .card:nth-of-type(3) .cardPrice {
+  font-size: 3rem;
+}
+
 .price-wrap .price-container .price_small_container .price_cards .popularCard {
   transform: scale(1.2);
   background-image: linear-gradient(#c87b4b, #eb684e);
@@ -3779,7 +3792,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 50px;
 }
 
 .d-updateContent .update_content_wrap .form-content .content-box {
@@ -3787,14 +3804,18 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
+  height: auto;
   background-color: #212a2f;
   color: honeydew;
+  margin: 40px;
 }
 
 .d-updateContent .update_content_wrap .form-content .content-box .h1-price {
-  margin: 10px;
+  margin: 40px;
+  padding: 0 100px 30px;
   font-size: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
 }
 
 .d-updateContent .update_content_wrap .form-content .content-box .h2-price {
@@ -3808,6 +3829,7 @@ html {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin: 50px 0;
 }
 
 .d-updateContent .update_content_wrap .form-content .content-box .new_value table {
@@ -3884,6 +3906,10 @@ html {
 
 .d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:nth-of-type(1) {
   background-color: transparent;
+}
+
+.d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:nth-of-type(4) {
+  background-image: linear-gradient(rgba(200, 123, 75, 0.452), rgba(235, 104, 78, 0.452));
 }
 
 .d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:nth-of-type(1):hover {
