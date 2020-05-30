@@ -1,11 +1,11 @@
-@extends('layouts\admin\adminApp', ['title' => "Update"])
+@extends('layouts.admin.adminApp', ['title' => "Update"])
 <section class="dashboard-home-wrap">
     <div class="h-s-wrap-block">
         <h1>Checkmat Plymouth</h1>
         <div class="add-newMember">
             <p>Update the member</p>
         <form action="{{route('pages.admin.update', ['id' => $findIdMember->id])}}" method="post">
-                @csrf 
+                @csrf
                 <div class="input-label">
                     <label for="">Name:</label>
                 <input type="text" name="name" placeholder="Name" value="{{ $findIdMember->name }}">
@@ -22,13 +22,13 @@
                     <label for="">Level:</label>
                     <input type="text" name="level" placeholder="Level"  value="{{ $findIdMember->level }}" autofocus>
                 </div>
-            
+
                 <div class="input-label">
                     <label for="">Start date:</label>
                     <input type="text" name="DateOfStart" placeholder="Start date"  value="{{ $findIdMember->DateOfStart }}">
                 </div>
                 <div class="input-label">
-                   
+
                     <input type="submit" class="submitMember">
                 </div>
             </form>

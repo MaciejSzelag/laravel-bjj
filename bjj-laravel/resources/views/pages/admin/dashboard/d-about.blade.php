@@ -1,3 +1,3 @@
 <section class="dashboard-about-wrap">
-    @include('\pages\admin\dashboard\head',[$titleDashboad= "About"])
+    @include('pages.admin.dashboard.head',[$titleDashboad= "About"])
 </section>

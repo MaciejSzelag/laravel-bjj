@@ -1,4 +1,4 @@
-@extends('layouts\admin\adminApp', ['title' => $title])
+@extends('layouts.admin.adminApp', ['title' => $title])
 <div class="navLine">
     <div class="name" id="id-name">Ian Harrop</div>
     <div class="date">{{date('d / M / Y')}}</div>

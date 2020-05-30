@@ -1,6 +1,6 @@
 
 <section class="dashboard-prices-wrap d-updateContent">
-    @include('\pages\admin\dashboard\head',[$titleDashboad= "Prices"])
+    @include('pages.admin.dashboard.head',[$titleDashboad= "Prices"])
 
 
     <div class="update_content_wrap">
@@ -9,7 +9,7 @@
                 <h1 class="h1-price">Main</h1>
                 <h2 class="h2-price">Adults and Juniors ( age 12+ )</h2>
                 <div class="new_value">
-                   
+
                     <table>
                         <tr>
                             <th>Plan name </th>
@@ -20,7 +20,7 @@
                             <th>Last updates</th>
                         </tr>
 
-              
+
                          @foreach ($prices as $price)
                         <tr class="tr-main">
                             <td>
@@ -39,9 +39,9 @@
                             <td>
                                 {{$price['updated_at']}}
                             </td>
-                                
+
                         </tr>
-                         @endforeach 
+                         @endforeach
                     </table>
             </div>
             </div>
@@ -51,7 +51,7 @@
                    Private lessons with Black Belt Coaches Ian or Amy Harrop
                 </h2>
                 <div class="new_value">
-                   
+
                     <table>
                         <tr>
                             <th>Plan name </th>
@@ -62,7 +62,7 @@
                             <th>Last updates</th>
                         </tr>
 
-              
+
                          @foreach ($privatePrices as $privPrice)
                         <tr class="tr-priv">
                             <td>
@@ -81,9 +81,9 @@
                             <td>
                                 {{$privPrice['updated_at']}}
                             </td>
-                                
+
                         </tr>
-                         @endforeach 
+                         @endforeach
                     </table>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                 <h1 class="h1-price">Kids</h1>
                 <h2 class="h2-price">Kids (age 7-11)</h2>
                 <div class="new_value">
-                   
+
                     <table>
                         <tr>
                             <th>Plan name </th>
@@ -102,7 +102,7 @@
                             <th>Last updates</th>
                         </tr>
 
-              
+
                          @foreach ($kidsPrice as $kid)
                         <tr class="tr-kids">
                             <td>
@@ -121,12 +121,12 @@
                             <td>
                                 {{$kid['updated_at']}}
                             </td>
-                                
+
                         </tr>
-                         @endforeach 
+                         @endforeach
                     </table>
-            </div> 
-    
+            </div>
+
 
         </div>
     </div>

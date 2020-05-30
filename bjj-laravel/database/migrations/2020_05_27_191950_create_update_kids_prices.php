@@ -13,9 +13,10 @@ class CreateUpdateKidsPrices extends Migration
      */
     public function up()
     {
-        Schema::create('update_kids_prices', function (Blueprint $table) {
+        Schema::create('prices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("planName");
+            $table->string("type_id"); // '1' , '2', '3'
             $table->string("description");
             $table->string("price");
             $table->string("frenquency");

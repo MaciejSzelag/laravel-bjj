@@ -1,5 +1,6 @@
 <section class="dashboard-home-wrap">
-    @include('\pages\admin\dashboard\head',[$titleDashboad= "Home"])
+    @include('pages.admin.dashboard.head',[$titleDashboad= "Home"])
+{{--    https://laravel.com/docs/7.x/blade#extending-a-layout--}}
     <div class="home-statistics">
         <div class="h-s-wrap-top">
             <div class="s1 reg-users">
@@ -12,7 +13,7 @@
                 </div>
                </div>
             </div>
-            <div class="s1 ">       
+            <div class="s1 ">
                 <div class="s1-title">
                     <h1>Visitors</h1>
                </div>
@@ -23,12 +24,12 @@
                 </div>
                </div>
             </div>
-            <div class="s1 ">       
+            <div class="s1 ">
                 <div class="s1-title">
                     <h1>Logged Users</h1>
                </div>
                <div class="s1-details">
-                    <div class="sd"> 
+                    <div class="sd">
                         <p>Last week</p>
                         <p>10</p>
                     </div>
@@ -53,7 +54,7 @@
         </div>
         <div class="add-newMember">
             <p>Add new member</p>
-        
+
 
             <form action="/pages/admin/dashboard/newMemberAdded" method="post">
                 @csrf
@@ -85,7 +86,7 @@
                     <input type="date" name="DateOfStart" placeholder="Start date" required maxlength="8">
                 </div>
                 <div class="input-label">
-                   
+
                     <input type="submit" class="submitMember">
                 </div>
             </form>
@@ -121,40 +122,40 @@
             </tr>
 
 
-            
-            @foreach ($member as $mem)
-     
+
+            @foreach ($members as $member)
+
             <tr class="tr-length">
                 <td>
-                     {{$mem['name']}}
+                     {{$member->name}}
                 </td>
                 <td>
-                    {{$mem['lastName']}}
+                    {{$member->lastName}}
                 </td>
-                <td class="td-color" style="border-left: 10px solid {{$mem['level']}} ">
-                    {{$mem['level']}}
+                <td class="td-color" style="border-left: 10px solid {{$member->level}} ">
+                    {{$member->level}}
                 </td>
                 <td>
-                    {{$mem['DateOfStart']}}
+                    {{$member->DateOfStart}}
                 </td>
 
                 <td>
-                    {{$mem['DateOfBirth']}}
+                    {{$member->DateOfBirth}}
                 </td>
 
                 <td>
-                    {{$mem['updated_at']}}
+                    {{$member->updated_at}}
                 </td>
-                
-                <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updateMember',['id'=> $mem['id']])}}">Update</a></button></td>
-                 <td class="action-btn"><button class="delete-btn"><a href="{{route('admin.deleteMember',['id'=> $mem['id']])}}">Delete</a></button></td>
-           
+
+                <td class="action-btn"><button class="edit-btn"><a href="{{route('admin.updateMember',['id'=> $member->id])}}">Update</a></button></td>
+                 <td class="action-btn"><button class="delete-btn"><a href="{{route('admin.deleteMember',['id'=> $member->id])}}">Delete</a></button></td>
+
             </tr>
-    
-            @endforeach 
+
+            @endforeach
         </table>
 
- 
+
 
     </div>
 </section>
