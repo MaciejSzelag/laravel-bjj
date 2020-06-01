@@ -14,17 +14,17 @@
                 <p class="title-price">Private lessons with Black Belt Coaches Ian or Amy Harrop </p>
             </div>
             <div class="price_cards">  
-                @foreach ($privatePrices as $privPrice)
-                <div class="card card-priv">
-                    <div class="topCard ">
-                        <p class="card-title ">  
-                            {{$privPrice['planName']}}
-                        </p>
+                @foreach ($privates as $private)
+                    <div class="card card-priv">
+                        <div class="topCard ">
+                            <p class="card-title ">  
+                                {{$private->plan_name}}
+                            </p>
+                        </div>
+                        <p class="plan-description">{{$private->description}}</p>
+                        <p class="cardPrice"> £{{$private->price}}</p>
+                        <p>{{$private->frenquency}}</p>
                     </div>
-                    <p class="plan-description">{{$privPrice['description']}}</p>
-                    <p class="cardPrice"> £{{$privPrice['price']}}</p>
-                    <p>{{$privPrice['frenquency']}}</p>
-                </div>
                 @endforeach 
             </div>
 
@@ -38,16 +38,16 @@
             </div>
           
             <div class="price_cards">
-                @foreach ($prices as $price)
+                @foreach ($adults as $adult)
                 <div class="card card-main">
                     <div class="topCard ">
                         <p class="card-title ">  
-                            {{$price['planName']}}
+                            {{$adult->plan_name}}
                         </p>
                     </div>
-                    <p class="plan-description">{{$price['description']}}</p>
-                    <p class="cardPrice"> £{{$price['price']}}</p>
-                    <p>{{$price['frenquency']}}</p>
+                    <p class="plan-description">{{$adult->description}}</p>
+                    <p class="cardPrice"> £{{$adult->price}}</p>
+                    <p>{{$adult->frenquency}}</p>
                 </div>
                 @endforeach 
             </div>
@@ -57,16 +57,16 @@
                 <p class="title-price">Kids (age 7-11) </p>
             </div>
             <div class="price_cards">
-                @foreach ($kidsPrice as $kid)
+                @foreach ($kids as $kid)
                 <div class="card card-kids">
                     <div class="topCard ">
                         <p class="card-title ">  
-                            {{$kid['planName']}}
+                            {{$kid->plan_name}}
                         </p>
                     </div>
-                    <p class="plan-description">{{$kid['description']}}</p>
-                    <p class="cardPrice"> £{{$kid['price']}}</p>
-                    <p>{{$kid['frenquency']}}</p>
+                    <p class="plan-description">{{$kid->description}}</p>
+                    <p class="cardPrice"> £{{$kid->price}}</p>
+                    <p>{{$kid->frenquency}}</p>
                 </div>
                 @endforeach 
             </div>

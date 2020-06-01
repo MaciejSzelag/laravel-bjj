@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+// namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class UpdatePrice extends Model
-{
-    protected $fillable = ["planName","description","price","frenquency" ];
-}
+// class UpdatePrice extends Model
+// {
+//     protected $fillable = ["plan_name","description","price","frenquency" ];
+// }

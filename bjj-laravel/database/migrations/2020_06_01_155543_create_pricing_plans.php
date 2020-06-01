@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeamMembers extends Migration
+class CreatePricingPlans extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateTeamMembers extends Migration
      */
     public function up()
     {
-        Schema::create('team_members', function (Blueprint $table) {
+        Schema::create('pricing_plans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("name");
-            $table->string("last_name");
-            $table->string("level");
-            $table->string("start_date");
-            $table->string("date_of_birth");
+            $table->string("type_id");
+            $table->string("plan_name");
+            $table->string("description");
+            $table->string("price");
+            $table->string("frenquency");
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTeamMembers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_members');
+        Schema::dropIfExists('pricing_plans');
     }
 }

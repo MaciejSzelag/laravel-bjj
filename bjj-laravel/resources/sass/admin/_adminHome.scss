@@ -1,6 +1,7 @@
 $sideSpace: 20px;
 
-.dashboard-home-wrap {
+.dashboard-home-wrap,
+.dashboard-members-wrap {
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -117,6 +118,7 @@ $sideSpace: 20px;
             .alert-success-member {
                 position: fixed;
                 left: 50%;
+                top: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -201,7 +203,8 @@ $sideSpace: 20px;
                         }
                     }
 
-                    input {
+                    input,
+                    select {
                         width: 60%;
                         border: none;
                         background-color: transparent;
@@ -209,6 +212,17 @@ $sideSpace: 20px;
                         border-bottom: 1px solid rgba(245, 245, 245, 0.424);
                         text-align: center;
                         padding: 5px 0;
+                    }
+
+                    select {
+
+                        text-align-last: center;
+
+
+                        option {
+
+                            background-color: rgba(0, 103, 151, 0.596);
+                        }
                     }
 
                     input:focus {

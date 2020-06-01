@@ -4,7 +4,7 @@ const d_home = document.querySelector(".admin-content .home");
 const d_price = document.querySelector(".admin-content .price");
 const d_timetable = document.querySelector(".admin-content .timetable");
 const d_seminar = document.querySelector(".admin-content .seminar");
-const d_blog = document.querySelector(".admin-content .blog");
+const d_member = document.querySelector(".admin-content .members");
 const d_news = document.querySelector(".admin-content .news");
 const d_about = document.querySelector(".admin-content .about");
 activeBlock(blocks, "active");
@@ -22,8 +22,8 @@ for (let i = 0; i < blocks.length; i++) {
                 d_timetable.classList.add("boardActive")
             } else if (blocks[i].classList.contains("Seminar")) {
                 d_seminar.classList.add("boardActive")
-            } else if (blocks[i].classList.contains("Blog")) {
-                d_blog.classList.add("boardActive")
+            } else if (blocks[i].classList.contains("Members")) {
+                d_member.classList.add("boardActive")
             } else if (blocks[i].classList.contains("News")) {
                 d_news.classList.add("boardActive")
             } else if (blocks[i].classList.contains("About")) {

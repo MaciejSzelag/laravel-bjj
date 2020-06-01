@@ -38,8 +38,6 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
             background-color: rgb(34, 45, 50);
         }
 
-
-
         .block {
             display: flex;
             justify-content: flex-start;
@@ -56,34 +54,23 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
             transition: .1s linear;
             letter-spacing: .1rem;
 
-
-
-
         }
 
         .block-b-top {
-
             border-top: $border;
         }
-
-
-
 
         .block:hover {
             background-color: rgb(26, 34, 38);
             border-left: 2px solid rgb(0, 132, 255);
             color: grey;
-
+            cursor: pointer;
         }
 
         .active {
-
             background-color: rgb(26, 34, 38);
             border-left: 2px solid rgb(0, 132, 255);
-
-
             color: grey;
-
         }
 
         .topId {
@@ -96,51 +83,4 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
             border: none;
         }
     }
-
-
-
-
 }
-
-
-// .activePrice {
-//     .dashoard-menu {
-//         .activePrice {
-
-//             border-left: 2px solid rgb(179, 0, 0);
-//             background-color: rgb(253, 254, 255);
-
-//             a {
-//                 color: rgb(59, 59, 59);
-//             }
-//         }
-//     }
-// }
-
-// .activeDashboardHome {
-//     .dashoard-menu {
-//         .activeDashboardHome {
-
-//             border-left: 2px solid rgb(179, 0, 0);
-//             background-color: rgb(253, 254, 255);
-
-//             a {
-//                 color: rgb(59, 59, 59);
-//             }
-//         }
-//     }
-// }
-
-// .activetimetable {
-//     .dashoard-menu {
-//         .activetimetable {
-
-//             border-left: 2px solid rgb(179, 0, 0);
-//             background-color: rgb(253, 254, 255);
-
-//             a {
-//                 color: rgb(59, 59, 59);
-//             }
-//         }
-//     }
-// }

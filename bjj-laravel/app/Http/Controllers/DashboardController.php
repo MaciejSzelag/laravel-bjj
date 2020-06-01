@@ -3,59 +3,78 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TeamMember;
-use App\UpdatePrice;
-use App\UpdatePrivatePrices;
-use App\UpdateKidsPrice;
+
+use App\Models\TeamMember;
+use App\Models\PricingPlans;
 
 class DashboardController extends Controller
 {
+
+    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans ){
+        $this->teamMembers = $teamMembers; 
+        $this->PricingPlans = $PricingPlans; 
+    }
+
      public function dashboardPanel(){
         $title = 'Content Management System';
-        $member = TeamMember::all()->toArray();
-        $length = TeamMember::count();
-        $whiteBelts = TeamMember::where('level','white')->count();
-        $blueBelts = TeamMember::where('level','blue')->count();
-        $purpleBelts = TeamMember::where('level','purple')->count();
-        $brownBelts = TeamMember::where('level','brown')->count();
-        $blackBelts = TeamMember::where('level','black')->count();
-        $prices = UpdatePrice::all()->toArray();
-        $privatePrices = UpdatePrivatePrices::all()->toArray();
-        $kidsPrice = UpdateKidsPrice::all()->toArray();
-        return view('pages.admin.dashboard', compact('title','member','length','whiteBelts','blueBelts','purpleBelts','brownBelts','blackBelts','prices','privatePrices','kidsPrice'));
-    }
+
+        $members = $this->teamMembers->getAllMembers();
+        $length = $members->count();
+
+
+        $whiteBelts = $this->teamMembers->getCountByLevel('white');
+        $blueBelts = $this->teamMembers->getCountByLevel('blue');
+        $purpleBelts = $this->teamMembers->getCountByLevel('purple');
+        $brownBelts = $this->teamMembers->getCountByLevel('brown');
+        $blackBelts = $this->teamMembers->getCountByLevel('black');
+        $privates = $this->PricingPlans->getPriceByTypeId('private');
+        $adults = $this->PricingPlans->getPriceByTypeId('adult');
+        $kids = $this->PricingPlans->getPriceByTypeId('kid');
+        return view('pages.admin.dashboard', compact(
+            'title',
+            'members',
+            'length',
+            'whiteBelts',
+            'blueBelts',
+            'purpleBelts',
+            'brownBelts',
+            'blackBelts',
+            'privates',
+            'adults',
+            'kids'));
+     }
 
      public function addMember(Request $request){
         $request->validate([
-            "name"=> 'required',
-            "lastName"=> 'required',
-            "level"=> 'required',
-            "DateOfBirth"=> 'required',
-            "DateOfStart"=> 'required',
+            "name" => 'required',
+            "last_name" => 'required',
+            "level" => 'required',
+            "date_of_birth" => 'required',
+            "start_date" => 'required',
         ]);
-        TeamMember::create($request->all());
+        $this->teamMembers->createNewMember($request);
           return redirect("/dashboard")->with('status-mamber','A new member has been added!');
     }
     public function deleteMember($id){
   
-       $findIdMember =  TeamMember::find($id);
+       $findIdMember =  $this->teamMembers->getAllMembers()->find($id);
        $findIdMember->delete();
        return redirect("/dashboard")->with('status-mamber','A  member has been deleted!');
 
     }
 
     public function updateMember($id){
-        $findIdMember = TeamMember::find($id);
+        $findIdMember = $this->teamMembers->getAllMembers()->find($id);
       
         return view("/pages/admin/updateMember")->with('findIdMember',$findIdMember);
     }
     public function saveUpdate(Request $request, $id){
-        $findIdMember = TeamMember::find($id);
+        $findIdMember = $this->teamMembers->getAllMembers()->find($id);
         $findIdMember->name = $request->name;
-        $findIdMember->lastName = $request->lastName;
-        $findIdMember->DateOfBirth = $request->DateOfBirth;
+        $findIdMember->last_name = $request->last_name;
+        $findIdMember->date_of_birth = $request->date_of_birth;
         $findIdMember->level = $request->level;
-        $findIdMember->DateOfStart = $request->DateOfStart;
+        $findIdMember->start_date = $request->start_date;
         $findIdMember->save();
         return redirect('/dashboard')->with('status-mamber','A  member has been updated!');
     }

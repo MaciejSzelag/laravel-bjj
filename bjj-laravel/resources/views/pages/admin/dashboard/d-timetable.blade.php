@@ -1,4 +1,4 @@
 <section class="dashboard-timetable-wrap">
-    @include('\pages\admin\dashboard\head',[$titleDashboad= "Timetable"])
+    @include('pages.admin.dashboard.head',[$titleDashboad= "Timetable"])
     
 </section>

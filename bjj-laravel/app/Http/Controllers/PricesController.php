@@ -6,14 +6,18 @@ use Illuminate\Http\Request;
 use App\UpdatePrice;
 use App\UpdatePrivatePrices;
 use App\UpdateKidsPrice;
+use App\Models\PricingPlans;
 
 class PricesController extends Controller
 {
+    public function __construct(PricingPlans $PricingPlans){
+        $this->PricingPlans = $PricingPlans; 
+    }
     public function prices(){
         $title = 'Prices | Students | Kids | Adults ';
-        $prices = UpdatePrice::all()->toArray();
-        $privatePrices = UpdatePrivatePrices::all()->toArray();
-        $kidsPrice = UpdateKidsPrice::all()->toArray();
-        return view('pages/prices', compact('title','prices','privatePrices','kidsPrice'));
+        $privates = $this->PricingPlans->getPriceByTypeId('private');
+        $adults = $this->PricingPlans->getPriceByTypeId('adult');
+        $kids = $this->PricingPlans->getPriceByTypeId('kid');
+        return view('pages/prices', compact('title','privates','adults','kids'));
     }
 }

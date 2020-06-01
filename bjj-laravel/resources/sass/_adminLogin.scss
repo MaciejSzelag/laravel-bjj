@@ -45,8 +45,8 @@
                 box-shadow: 0 0 2rem 0.5rem rgba(134, 127, 113, 0.575);
 
                 img {
-                    width: 100%;
-                    transform: rotate(0);
+                    width: 80%;
+
                     transition: 0.7s ease-in-out;
                 }
             }
@@ -113,11 +113,12 @@
                 font-size: 1.4rem;
             }
         }
+
         form:hover {
             .imgcontainer {
                 img {
-                    width: 50%;
-                    transform: rotate(360deg);
+                    width: 100%;
+
                 }
             }
         }

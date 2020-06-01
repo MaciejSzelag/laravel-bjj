@@ -4,27 +4,45 @@
     <div class="timetable-wrap_container">
       <h1 class="t-title">Timetable</h1>
       <div class="container_t">
+
         <div class="day-card">
           <div class="day-card_name">Monday</div>
           <div class="day-card_times">
+            @foreach ($mondays as $monday)
             <div class="day-time">
-              <p>10:00 - 11:00</p>
-              <p class="className mx">Mixed Level (GI)</p>
+              <p>{{$monday['startHour']}}:{{$monday['StartMinutes']}}- {{$monday['endHour']}}:{{$monday['StartMinutes']}}</p>
+              <p class="className mx" style="color:{{$monday['textColor']}}; background-color:{{$monday['classColor']}}">{{$monday['className']}}</p>
+            </div>  
+            @endforeach
+
             </div>
-            <div class="day-time">
-              <p>17:15 - 18:00</p>
-              <p class="className kids">Kids (GI)</p>
-            </div>
-            <div class="day-time">
-              <p>18:00 - 19:00</p>
-              <p class="className bja">Beginners, Juniors & Adults (GI)</p>
-            </div>
-            <div class="day-time">
-              <p>19:00 - 19:30</p>
-              <p class="className  open">Open Mat</p>
-            </div>
-          </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="day-card">
           <div class="day-card_name">Tuesday</div>
           <div class="day-card_times">
@@ -186,5 +204,5 @@
     </div>
   </section>
   
-
+  <script src="{{asset('js/timetable.js')}}"></script>
 @endsection

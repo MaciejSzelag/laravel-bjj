@@ -8,24 +8,24 @@
                 @csrf 
                 <div class="input-label">
                     <label for="">Name:</label>
-                <input type="text" name="name" placeholder="Name" value="{{ $findIdMember->name }}">
+                <input type="text" name="name" placeholder="Name" value="{{ $findIdMember->name }}" required>
                 </div>
                 <div class="input-label">
                     <label for="">Surname:</label>
-                    <input type="text" name="lastName" placeholder="Surname" value="{{ $findIdMember->lastName }}">
+                    <input type="text" name="lastName" placeholder="Surname" value="{{ $findIdMember->lastName }}" required>
                 </div>
                 <div class="input-label">
                     <label for="">Date of birth:</label>
-                    <input type="text" name="DateOfBirth" placeholder="Date of birth"  value="{{ $findIdMember->DateOfBirth }}">
+                    <input type="text" name="DateOfBirth" placeholder="Date of birth"  value="{{ $findIdMember->DateOfBirth }}" required>
                 </div>
                 <div class="input-label">
-                    <label for="">Level:</label>
-                    <input type="text" name="level" placeholder="Level"  value="{{ $findIdMember->level }}" autofocus>
+                    <label for="">Level:</label>                
+                    <input type="text" name="level" placeholder="Level"  value="{{ $findIdMember->level }}" autofocus required>
                 </div>
             
                 <div class="input-label">
                     <label for="">Start date:</label>
-                    <input type="text" name="DateOfStart" placeholder="Start date"  value="{{ $findIdMember->DateOfStart }}">
+                    <input type="text" name="DateOfStart" placeholder="Start date"  value="{{ $findIdMember->DateOfStart }}" required>
                 </div>
                 <div class="input-label">
                    
