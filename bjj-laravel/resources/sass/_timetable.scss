@@ -49,8 +49,11 @@
 
                 .day-card_name,
                 .day-card_times {
-                    position: absolute;
-                    left: 0;
+                    // position: absolute;
+                    // left: 0;
+                    @include flexCenter;
+                    justify-content: flex-start;
+                    flex-direction: column;
                     width: 100%;
                 }
 

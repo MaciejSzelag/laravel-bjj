@@ -28,8 +28,11 @@ Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
 
 Route::get('/dashboard', 'DashboardController@dashboardPanel');
 // Route::get('pages.admin.dashboard', 'DashboardController@counerMember');
-//Route fo add new member do DB
+//Route fo add new member 
 Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMember');
+
+//Route for a new class
+Route::post('/pages/admin/dashboard/newClassAdded','DashboardTimetableController@addNewClass');
 //route for delete member
 Route::get('pages/admin/delete/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
 //route for update details about member
@@ -43,13 +46,19 @@ Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardPriceController@up
 Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@saveUpdatePlan',
 'as'=>'pages.admin.updatePlans']);
 
-//route update for plans private
-Route::get('pages/admin/updatePrivate/{id}', ['uses'=>'DashboardPriceController@updatePrivatePrice','as'=>'admin.updatePrivatePlan']);
 
-Route::post('pages/admin/updatePrivate/{id}', ['uses' => 'DashboardPriceController@saveUpdatePrivatePlan',
-'as'=>'pages.admin.updatePrivate']);
+
+
+
+
+
+//route update for plans private
+// Route::get('pages/admin/updatePrivate/{id}', ['uses'=>'DashboardPriceController@updatePrivatePrice','as'=>'admin.updatePrivatePlan']);
+
+// Route::post('pages/admin/updatePrivate/{id}', ['uses' => 'DashboardPriceController@saveUpdatePrivatePlan',
+// 'as'=>'pages.admin.updatePrivate']);
 
 //route update for plans kids
-Route::get('pages/admin/updateKids/{id}', ['uses'=>'DashboardPriceController@updateKidsPrice','as'=>'admin.updateKidsPlan']);
-Route::post('pages/admin/updateKids/{id}', ['uses' => 'DashboardPriceController@saveUpdateKidsPlan',
-'as'=>'pages.admin.updateKids']);
+// Route::get('pages/admin/updateKids/{id}', ['uses'=>'DashboardPriceController@updateKidsPrice','as'=>'admin.updateKidsPlan']);
+// Route::post('pages/admin/updateKids/{id}', ['uses' => 'DashboardPriceController@saveUpdateKidsPlan',
+// 'as'=>'pages.admin.updateKids']);

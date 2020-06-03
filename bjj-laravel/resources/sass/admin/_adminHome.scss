@@ -1,7 +1,8 @@
 $sideSpace: 20px;
 
 .dashboard-home-wrap,
-.dashboard-members-wrap {
+.dashboard-members-wrap,
+.dashboard-timetable-wrap {
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -178,6 +179,8 @@ $sideSpace: 20px;
                 margin-bottom: 30px;
             }
 
+
+
             form {
                 display: flex;
                 justify-content: space-between;
@@ -187,7 +190,7 @@ $sideSpace: 20px;
 
                 .input-label {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
                     flex-direction: row;
 
@@ -203,6 +206,8 @@ $sideSpace: 20px;
                         }
                     }
 
+
+
                     input,
                     select {
                         width: 60%;
@@ -214,6 +219,17 @@ $sideSpace: 20px;
                         padding: 5px 0;
                     }
 
+                    .time-lab {
+                        width: 100%;
+                    }
+
+                    .manual-color {
+                        height: 50px;
+                        width: 30%;
+                        align-self: center;
+
+                    }
+
                     select {
 
                         text-align-last: center;
@@ -223,6 +239,11 @@ $sideSpace: 20px;
 
                             background-color: rgba(0, 103, 151, 0.596);
                         }
+                    }
+
+                    .time {
+                        width: 15%;
+
                     }
 
                     input:focus {
@@ -247,6 +268,11 @@ $sideSpace: 20px;
                     ::placeholder {
                         color: rgba(0, 103, 151, 0.719);
                     }
+                }
+
+                .time-label {
+                    font-size: 2rem;
+                    margin: 20px 0;
                 }
             }
         }

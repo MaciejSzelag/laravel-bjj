@@ -12,11 +12,11 @@
                 </div>
                 <div class="input-label">
                     <label for="">Surname:</label>
-                    <input type="text" name="lastName" placeholder="Surname" value="{{ $findIdMember->lastName }}" required>
+                    <input type="text" name="last_name" placeholder="Surname" value="{{ $findIdMember->last_name }}" required>
                 </div>
                 <div class="input-label">
                     <label for="">Date of birth:</label>
-                    <input type="text" name="DateOfBirth" placeholder="Date of birth"  value="{{ $findIdMember->DateOfBirth }}" required>
+                    <input type="text" name="date_of_birth" placeholder="Date of birth"  value="{{ $findIdMember->date_of_birth }}" required>
                 </div>
                 <div class="input-label">
                     <label for="">Level:</label>                
@@ -25,7 +25,7 @@
             
                 <div class="input-label">
                     <label for="">Start date:</label>
-                    <input type="text" name="DateOfStart" placeholder="Start date"  value="{{ $findIdMember->DateOfStart }}" required>
+                    <input type="text" name="start_date" placeholder="Start date"  value="{{ $findIdMember->start_date }}" required>
                 </div>
                 <div class="input-label">
                    

@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\UpdatePrice;
-use App\UpdatePrivatePrices;
-use App\UpdateKidsPrice;
 use App\Models\PricingPlans;
 
 class PricesController extends Controller
