@@ -1902,6 +1902,7 @@ html {
   padding-top: 150px;
   background-color: #aeb6ff;
   background-image: linear-gradient(-30deg, rgba(82, 96, 224, 0.9) 50%, rgba(82, 136, 224, 0.9) 75%, rgba(82, 96, 224, 0.9) 100%);
+  overflow: hidden;
 }
 
 .timetable-wrap .timetable-wrap_container {
@@ -1929,6 +1930,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 100px 50px;
 }
@@ -1936,7 +1938,8 @@ html {
 .timetable-wrap .timetable-wrap_container .container_t .day-card {
   position: relative;
   width: 250px;
-  height: 450px;
+  padding-bottom: 30px;
+  min-height: 300px;
   border: 1px solid #5260e0;
   border-top: 3px solid rgba(161, 255, 247, 0.513);
   border-radius: 10px;
@@ -2041,7 +2044,6 @@ html {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  height: auto;
   padding: 80px 0;
   flex-wrap: wrap;
 }
@@ -2049,11 +2051,12 @@ html {
 .timetable-wrap .timetable-wrap_container .container_info .info-card {
   position: relative;
   width: 400px;
-  height: 550px;
+  min-height: 250px;
+  padding: 0 0 40px;
   border: 1px solid #5260e0;
   border-top: 3px solid rgba(161, 255, 247, 0.513);
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 20px 100px;
   overflow: hidden;
   background-color: #ffeed0;
   transform: translateX(0);
@@ -2062,13 +2065,15 @@ html {
   transform: scale(1);
 }
 
+.timetable-wrap .timetable-wrap_container .container_info .info-card p {
+  padding-top: 30px;
+  font-size: 1.6rem;
+}
+
 .timetable-wrap .timetable-wrap_container .container_info .info-card .info-card_title {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 50px;
   font-size: 2rem;
@@ -2108,11 +2113,8 @@ html {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 50px;
-  left: 0;
   width: 100%;
-  height: calc(100% - 50px);
+  min-height: 150px;
   font-size: 1.8rem;
   padding: 10px 50px;
   box-shadow: 0 -5px 10px 3px rgba(255, 255, 255, 0.424);
@@ -2127,6 +2129,7 @@ html {
 @media (max-width: 1280px) {
   .timetable-wrap .timetable-wrap_container .container_info .info-card {
     width: 450px;
+    margin: 20px 10px;
   }
 
   .timetable-wrap .timetable-wrap_container .container_info .info-card:hover {
@@ -3595,10 +3598,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 90%;
+  width: 98%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
   background-color: #1a2226;
   color: honeydew;
   padding: 20px;
@@ -3617,6 +3619,19 @@ html {
 .dashboard-members-wrap .h-s-wrap-block h3,
 .dashboard-timetable-wrap .h-s-wrap-block h3 {
   font-size: 2rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .h1-timetable,
+.dashboard-members-wrap .h-s-wrap-block .h1-timetable,
+.dashboard-timetable-wrap .h-s-wrap-block .h1-timetable {
+  font-size: 3.5rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .h2-timetable,
+.dashboard-members-wrap .h-s-wrap-block .h2-timetable,
+.dashboard-timetable-wrap .h-s-wrap-block .h2-timetable {
+  font-size: 2rem;
+  margin-bottom: 50px;
 }
 
 .dashboard-home-wrap .h-s-wrap-block .alert .alert-success-member,
@@ -3823,6 +3838,23 @@ html {
   color: rgba(0, 103, 151, 0.719);
 }
 
+.dashboard-home-wrap .h-s-wrap-block .add-newMember form textarea,
+.dashboard-members-wrap .h-s-wrap-block .add-newMember form textarea,
+.dashboard-timetable-wrap .h-s-wrap-block .add-newMember form textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: wheat;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.424);
+  padding: 5px 0;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .add-newMember form textarea:focus,
+.dashboard-members-wrap .h-s-wrap-block .add-newMember form textarea:focus,
+.dashboard-timetable-wrap .h-s-wrap-block .add-newMember form textarea:focus {
+  color: whitesmoke;
+}
+
 .dashboard-home-wrap .h-s-wrap-block .add-newMember form .time-label,
 .dashboard-members-wrap .h-s-wrap-block .add-newMember form .time-label,
 .dashboard-timetable-wrap .h-s-wrap-block .add-newMember form .time-label {
@@ -3833,7 +3865,7 @@ html {
 .dashboard-home-wrap .h-s-wrap-block table,
 .dashboard-members-wrap .h-s-wrap-block table,
 .dashboard-timetable-wrap .h-s-wrap-block table {
-  width: 90%;
+  width: 95%;
   height: 100%;
   color: honeydew;
   background-color: #212a2f;
@@ -3939,6 +3971,12 @@ html {
   color: #686868;
 }
 
+.dashboard-home-wrap .h-s-wrap-block table tr .td-big,
+.dashboard-members-wrap .h-s-wrap-block table tr .td-big,
+.dashboard-timetable-wrap .h-s-wrap-block table tr .td-big {
+  width: 150px;
+}
+
 .dashboard-home-wrap .h-s-wrap-block table tr:nth-of-type(1),
 .dashboard-members-wrap .h-s-wrap-block table tr:nth-of-type(1),
 .dashboard-timetable-wrap .h-s-wrap-block table tr:nth-of-type(1) {
@@ -3955,6 +3993,18 @@ html {
 .dashboard-members-wrap .h-s-wrap-block table tr:hover,
 .dashboard-timetable-wrap .h-s-wrap-block table tr:hover {
   background-color: #b1dcff;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .time-table tr th,
+.dashboard-members-wrap .h-s-wrap-block .time-table tr th,
+.dashboard-timetable-wrap .h-s-wrap-block .time-table tr th {
+  font-size: 1.5rem;
+}
+
+.dashboard-home-wrap .h-s-wrap-block .time-table tr td button a,
+.dashboard-members-wrap .h-s-wrap-block .time-table tr td button a,
+.dashboard-timetable-wrap .h-s-wrap-block .time-table tr td button a {
+  font-size: 1.1rem;
 }
 
 @-webkit-keyframes bounce-in-top {

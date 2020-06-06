@@ -33,10 +33,29 @@ Route::post('pages/admin/dashboard/newMemberAdded', 'DashboardController@addMemb
 
 //Route for a new class
 Route::post('/pages/admin/dashboard/newClassAdded','DashboardTimetableController@addNewClass');
+//Route for new class information
+Route::post('/pages/admin/dashboard/newClassInformation','DashboardTimetableController@addNewClassInformation');
+//Delete
+Route::get('pages/admin/deleteClass/{id}', ['uses'=>'DashboardTimetableController@deleteClass','as'=>'admin.deleteClass']);
+Route::get('pages/admin/deleteClassInformation/{id}',['uses'=>'DashboardTimetableController@deleteClassInformation', 'as'=>'admin.deleteClassInformation']);
+
+
+//direction for update
+Route::get('pages/admin/updateClass/{id}', ['uses' => 'DashboardTimetableController@updatedClass',
+'as'=>'admin.updateTimetable']);
+//save new updates for timetable
+
+Route:: post('pages/admin/updatedTimetable/{id}',['uses'=>'DashboardTimetableController@saveUpdatedClass','as'=>'pages.admin.updateClass']);
+
 //route for delete member
 Route::get('pages/admin/delete/{id}', ['uses'=>'DashboardController@deleteMember','as'=>'admin.deleteMember']);
 //route for update details about member
 Route::get('pages/admin/update/{id}', ['uses'=>'DashboardController@updateMember','as'=>'admin.updateMember']);
+
+
+
+
+
 Route::post('pages/admin/updateMember/{id}', ['uses' => 'DashboardController@saveUpdate',
 'as'=>'pages.admin.update']);
 
@@ -45,20 +64,3 @@ Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardPriceController@up
 
 Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@saveUpdatePlan',
 'as'=>'pages.admin.updatePlans']);
-
-
-
-
-
-
-
-//route update for plans private
-// Route::get('pages/admin/updatePrivate/{id}', ['uses'=>'DashboardPriceController@updatePrivatePrice','as'=>'admin.updatePrivatePlan']);
-
-// Route::post('pages/admin/updatePrivate/{id}', ['uses' => 'DashboardPriceController@saveUpdatePrivatePlan',
-// 'as'=>'pages.admin.updatePrivate']);
-
-//route update for plans kids
-// Route::get('pages/admin/updateKids/{id}', ['uses'=>'DashboardPriceController@updateKidsPrice','as'=>'admin.updateKidsPlan']);
-// Route::post('pages/admin/updateKids/{id}', ['uses' => 'DashboardPriceController@saveUpdateKidsPlan',
-// 'as'=>'pages.admin.updateKids']);

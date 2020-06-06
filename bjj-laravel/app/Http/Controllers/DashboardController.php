@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Models\TeamMember;
 use App\Models\PricingPlans;
+use App\Models\Timetable;
+use App\Models\TimetableClassInformation;
 
 class DashboardController extends Controller
 {
 
-    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans ){
+    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans, Timetable $Timetables,TimetableClassInformation $classinfo ){
         $this->teamMembers = $teamMembers; 
         $this->PricingPlans = $PricingPlans; 
+        $this->Timetable = $Timetables;
+        $this->TimetableClassInformation = $classinfo;
     }
 
      public function dashboardPanel(){
@@ -20,7 +24,20 @@ class DashboardController extends Controller
 
         $members = $this->teamMembers->getAllMembers();
         $length = $members->count();
+        $mondays = $this->Timetable->getByDay('Monday');
+        $tuesdays = $this->Timetable->getByDay('Tuesday');
+        $wednesdays = $this->Timetable->getByDay('Wednesday');
+        $thursdays = $this->Timetable->getByDay('Thursday');
+        $fridays = $this->Timetable->getByDay('Friday');
+        $saturdays = $this->Timetable->getByDay('Saturday');
 
+        $red= 'Red';
+        $green= 'Green';
+        $orange = 'Orange';
+        $yellow = 'Yellow';
+        $blue = 'Blue';
+
+        $classInfos = $this->TimetableClassInformation->getAllClassInformation();
 
         $whiteBelts = $this->teamMembers->getCountByLevel('white');
         $blueBelts = $this->teamMembers->getCountByLevel('blue');
@@ -41,7 +58,19 @@ class DashboardController extends Controller
             'blackBelts',
             'privates',
             'adults',
-            'kids'));
+            'kids',
+            'mondays',
+            'tuesdays',
+            'wednesdays',
+            'thursdays',
+            'fridays',
+            'saturdays',
+            'red',
+            'green',
+            'orange',
+            'yellow',
+            'blue',
+            'classInfos'));
      }
 
      public function addMember(Request $request){
@@ -76,7 +105,7 @@ class DashboardController extends Controller
         $findIdMember->level = $request->level;
         $findIdMember->start_date = $request->start_date;
         $findIdMember->save();
-        return redirect('/dashboard')->with('status-mamber','A  member has been updated!');
+        return redirect('/dashboard')->with('status-mamber','The member has been updated!');
     }
   
 

@@ -96,10 +96,10 @@ $sideSpace: 20px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 90%;
+        width: 98%;
         height: auto;
         border-radius: 5px;
-        box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
+        // box-shadow: 0 7px 20px 3px rgba(200, 224, 253, 0.466);
         background-color: rgb(26, 34, 38);
         color: honeydew;
         padding: 20px;
@@ -113,6 +113,15 @@ $sideSpace: 20px;
 
         h3 {
             font-size: 2rem;
+        }
+
+        .h1-timetable {
+            font-size: 3.5rem;
+        }
+
+        .h2-timetable {
+            font-size: 2rem;
+            margin-bottom: 50px;
         }
 
         .alert {
@@ -270,15 +279,31 @@ $sideSpace: 20px;
                     }
                 }
 
+                textarea {
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    color: wheat;
+                    border-bottom: 1px solid rgba(245, 245, 245, 0.424);
+
+                    padding: 5px 0;
+                }
+
+                textarea:focus {
+                    color: whitesmoke;
+                }
+
                 .time-label {
                     font-size: 2rem;
                     margin: 20px 0;
                 }
+
+
             }
         }
 
         table {
-            width: 90%;
+            width: 95%;
             height: 100%;
             color: honeydew;
             background-color: rgb(33, 42, 47);
@@ -356,6 +381,10 @@ $sideSpace: 20px;
                 .td-color {
                     color: rgb(104, 104, 104);
                 }
+
+                .td-big {
+                    width: 150px;
+                }
             }
 
             tr:nth-of-type(1) {
@@ -369,6 +398,23 @@ $sideSpace: 20px;
             tr:hover {
                 background-color: rgb(177, 220, 255);
             }
+        }
+
+        .time-table {
+            tr {
+                th {
+                    font-size: 1.5rem;
+                }
+
+                td {
+                    button {
+                        a {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
