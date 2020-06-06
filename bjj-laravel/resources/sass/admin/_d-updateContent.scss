@@ -1,0 +1,158 @@
+.d-updateContent {
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+
+    .update_content_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+
+
+        .form-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            padding-top: 50px;
+
+
+
+
+            .content-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 95%;
+                height: auto;
+                background-color: rgb(33, 42, 47);
+                color: honeydew;
+                margin: 40px;
+
+
+                .h1-price {
+                    margin: 40px;
+                    padding: 0 100px 30px;
+                    font-size: 3rem;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+                }
+
+                .h2-price {
+                    margin: 15px 0 20px;
+                    font-size: 2rem;
+                }
+
+
+                .new_value {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 50px 0;
+
+
+                    table {
+                        width: 95%;
+                        height: 100%;
+                        color: honeydew;
+
+                        box-shadow: 0 0 0.2rem 0.1rem rgba(240, 255, 240, 0.308);
+                        padding: 20px;
+                        border-radius: 5px;
+                        margin-bottom: 3rem;
+
+                        tr {
+                            background-color: rgb(253, 253, 253);
+                            margin: 10px;
+
+                            th {
+                                background-color: rgba(0, 103, 151, 0.596);
+                                color: rgb(196, 196, 196);
+                                font-size: 1.9rem;
+                                letter-spacing: 2px;
+
+                                border-radius: 10px 10px 0 0;
+                                padding: 10px 0;
+                            }
+
+                            td {
+                                color: grey;
+                                text-align: center;
+                                padding: 5px 0;
+
+                                button {
+                                    color: honeydew;
+                                    width: 100%;
+                                    height: 100%;
+                                    border: none;
+
+                                    a {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: 100%;
+                                        text-decoration: none;
+                                        color: whitesmoke;
+                                    }
+                                }
+
+                                .edit-btn {
+                                    background-color: rgb(31, 155, 0);
+                                }
+
+                                .edit-btn:hover {
+                                    background-color: rgba(40, 202, 0, 0.753);
+                                }
+                            }
+
+                            .action-btn {
+                                border: none;
+                                padding: 0;
+                            }
+
+                            td:nth-child(1) {
+                                border-left: 1px solid rgba(245, 222, 179, 0.507);
+                            }
+
+                            .td-color {
+                                color: rgb(104, 104, 104);
+                            }
+                        }
+
+                        tr:nth-of-type(1) {
+                            background-color: transparent;
+                        }
+
+                        .tr-priv:nth-of-type(3),
+                        .tr-main:nth-of-type(4),
+                        .tr-kids:nth-of-type(3) {
+                            background-image: linear-gradient(rgba(200, 123, 75, 0.452), rgba(235, 104, 78, 0.452));
+                        }
+
+                        tr:nth-of-type(1):hover {
+                            background-color: transparent;
+                        }
+
+                        tr:hover {
+                            background-color: rgb(215, 253, 198);
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+    }
+}

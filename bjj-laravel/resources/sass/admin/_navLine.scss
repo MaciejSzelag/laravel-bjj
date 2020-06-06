@@ -1,0 +1,37 @@
+.navLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - #{$adminAsideWidth});
+    height: $heightBlock;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(51, 147, 202);
+    z-index: 10;
+
+    .name,
+    .date {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        font-size: 1.8rem;
+
+    }
+
+    .date {
+        background-color: rgb(26, 112, 161);
+        padding: 0 4rem;
+    }
+
+    .name {
+        border-right: 1px solid rgba(255, 255, 255, 0.678);
+        padding: 0 3.5rem;
+        // margin-right: 3rem;
+
+
+    }
+}

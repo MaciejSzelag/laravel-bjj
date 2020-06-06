@@ -132,6 +132,23 @@
                     }
                 }
 
+                .card-main:nth-of-type(3),
+                .card-priv:nth-of-type(2),
+                .card-kids:nth-of-type(2) {
+                    transform: scale(1.2);
+                    background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));
+
+                    .plan-description {
+                        font-size: 3rem;
+                    }
+
+                    .cardPrice {
+                        font-size: 3rem;
+                    }
+                }
+
+
+
                 .popularCard {
                     transform: scale(1.2);
                     background-image: linear-gradient(rgb(200, 123, 75), rgb(235, 104, 78));

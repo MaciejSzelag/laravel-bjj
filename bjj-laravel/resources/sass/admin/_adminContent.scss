@@ -1,0 +1,31 @@
+.admin-dashboard-body {
+    background-color: rgb(26, 34, 38);
+}
+
+.admin-content {
+    position: absolute;
+    top: $heightBlock;
+    left: $adminAsideWidth;
+    width: calc(100% - #{$adminAsideWidth});
+    // height: calc(100% - #{$heightBlock});
+    height: auto;
+    background-color: rgb(253, 254, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .adminPanel {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(251, 254, 255);
+    }
+
+    .boardActive {
+        display: flex;
+    }
+}
