@@ -64,3 +64,7 @@ Route::get('pages/admin/updatePlans/{id}', ['uses'=>'DashboardPriceController@up
 
 Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@saveUpdatePlan',
 'as'=>'pages.admin.updatePlans']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
