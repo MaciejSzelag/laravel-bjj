@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Users;
 use App\Models\NewPost;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -27,15 +28,30 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        // Get the currently authenticated user...
+        $user = Auth::user();
+
+        // Get the currently authenticated user's ID...
+        $id = Auth::id();
+
+        // add user level
+        // add it compact itd
+
+        dd($user->email, $id);
+
+
         $newPosts = $this->NewPost->getAllPosts();
-        return view('home',compact('newPosts'))->with('status', 'You are logged in!');
+        return view('home', compact('newPosts'))->with('status', 'You are logged in!');
     }
-    public function addNewPost(Request $request){
+
+    public function addNewPost(Request $request)
+    {
         $request->validate([
             'auth_name' => 'required',
             'content' => 'required'
         ]);
         $this->NewPost->createNewPost($request);
         return redirect('/home')->with('status', 'A new post has been added');
-}
+    }
 }
