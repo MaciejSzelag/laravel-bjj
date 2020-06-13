@@ -1,4 +1,4 @@
-@extends('layouts.appMine',['title'=>$title])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <section class="gallery-container">
     <div class="gallery_wrap">

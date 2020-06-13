@@ -1,4 +1,4 @@
-@extends('layouts.appMine',['title'=>$title])
+@extends('layouts.app',['title'=>$title])
 @section('content')
 <div class="about-wrap">
     <div class="about_content">

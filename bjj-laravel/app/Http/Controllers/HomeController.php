@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users;
+use App\Models\NewPost;
 
 class HomeController extends Controller
 {
@@ -11,9 +13,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Users $Users, NewPost $NewPost)
     {
         $this->middleware('auth');
+        $this->Users = $Users;
+        $this->NewPost = $NewPost;
     }
 
     /**
@@ -23,6 +27,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $newPosts = $this->NewPost->getAllPosts();
+        return view('home',compact('newPosts'))->with('status', 'You are logged in!');
     }
+    public function addNewPost(Request $request){
+        $request->validate([
+            'auth_name' => 'required',
+            'content' => 'required'
+        ]);
+        $this->NewPost->createNewPost($request);
+        return redirect('/home')->with('status', 'A new post has been added');
+}
 }

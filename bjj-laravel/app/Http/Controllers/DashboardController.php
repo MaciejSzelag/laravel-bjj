@@ -12,11 +12,11 @@ use App\Models\TimetableClassInformation;
 class DashboardController extends Controller
 {
 
-    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans, Timetable $Timetables,TimetableClassInformation $classinfo ){
+    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans, Timetable $Timetables, TimetableClassInformation $TimetableClassInformation ){
         $this->teamMembers = $teamMembers; 
         $this->PricingPlans = $PricingPlans; 
         $this->Timetable = $Timetables;
-        $this->TimetableClassInformation = $classinfo;
+        $this->TimetableClassInformation = $TimetableClassInformation;
     }
 
      public function dashboardPanel(){

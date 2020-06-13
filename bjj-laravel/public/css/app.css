@@ -3197,125 +3197,81 @@ html {
   align-items: center;
   flex-direction: column;
   width: 50rem;
-  height: 90%;
-  background-color: wheat;
+  height: 60%;
+  background-color: #357ca5;
   border-radius: 0.8rem;
-  box-shadow: 0 0 2rem 0.5rem rgba(128, 128, 128, 0.575);
+  box-shadow: 0 0 0.8rem 0.5rem rgba(158, 158, 158, 0.993);
+  margin-top: 10rem;
 }
 
-.admin-log .wrap-log h2 {
-  font-size: 3rem;
-  margin: 3rem 0;
-}
-
-.admin-log .wrap-log p {
-  font-size: 1.8rem;
-}
-
-.admin-log .wrap-log form {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 90%;
-}
-
-.admin-log .wrap-log form .imgcontainer {
+.admin-log .wrap-log .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 25rem;
-  background-color: #a6cf53;
-  border-radius: 50%;
-  box-shadow: 0 0 2rem 0.5rem rgba(134, 127, 113, 0.575);
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
 }
 
-.admin-log .wrap-log form .imgcontainer img {
-  width: 80%;
-  transition: 0.7s ease-in-out;
-}
-
-.admin-log .wrap-log form .container {
+.admin-log .wrap-log .container .imgcontainer,
+.admin-log .wrap-log .container .card {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
 }
 
-.admin-log .wrap-log form .container label {
-  margin: 1rem 0;
+.admin-log .wrap-log .container .imgcontainer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.678);
+}
+
+.admin-log .wrap-log .container .imgcontainer img {
+  width: 100%;
+}
+
+.admin-log .wrap-log .container .card {
+  width: 50%;
+  height: 40%;
+  margin-top: 5rem;
+}
+
+.admin-log .wrap-log .container .card .card-header {
   font-size: 2rem;
 }
 
-.admin-log .wrap-log form .container input {
-  width: 25rem;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  border: none;
-  border-radius: 0.5rem;
-}
-
-.admin-log .wrap-log form .container input:focus {
-  background-color: #fffebc;
-  outline: none;
-}
-
-.admin-log .wrap-log form .container ::-webkit-input-placeholder {
-  color: #d6d6d6;
-}
-
-.admin-log .wrap-log form .container ::-moz-placeholder {
-  color: #d6d6d6;
-}
-
-.admin-log .wrap-log form .container :-ms-input-placeholder {
-  color: #d6d6d6;
-}
-
-.admin-log .wrap-log form .container ::-ms-input-placeholder {
-  color: #d6d6d6;
-}
-
-.admin-log .wrap-log form .container ::placeholder {
-  color: #d6d6d6;
-}
-
-.admin-log .wrap-log form .container .checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 4rem;
-  font-size: 1.5rem;
-}
-
-.admin-log .wrap-log form .container .checkbox input {
-  width: 10%;
-}
-
-.admin-log .wrap-log form .container button {
-  margin: 2rem 0;
-  width: 15rem;
-  height: 3rem;
-  color: white;
-  border-radius: 0.5rem;
-  background-color: #0069d9;
-}
-
-.admin-log .wrap-log form .container button:hover {
-  background-color: #0276f1;
-}
-
-.admin-log .wrap-log form .small {
-  flex-direction: row;
+.admin-log .wrap-log .container .card-body form .form-group {
   font-size: 1.4rem;
 }
 
-.admin-log .wrap-log form:hover .imgcontainer img {
-  width: 100%;
+.admin-log .wrap-log .container .card-body form .form-group .log-Input input {
+  border: none;
+  border-bottom: 1px solid wheat;
+  background-color: transparent;
+}
+
+.admin-log .wrap-log .container .card-body form .form-group .log-Input input:focus {
+  outline: none;
+  color: white;
+}
+
+.admin-log .wrap-log .container .card-body form .form-group .btn-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.admin-log .wrap-log .container .card-body form .form-group .btn-sub .btn-primary {
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 4rem;
+  border: 1px solid wheat;
+  margin-bottom: 10px;
 }
 
 .dashoard-menu-wrap {
@@ -4254,6 +4210,165 @@ html {
 
 .d-updateContent .update_content_wrap .form-content .content-box .new_value table tr:hover {
   background-color: #d7fdc6;
+}
+
+.container {
+  width: 100%;
+}
+
+.container .container_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container .container_cards .card-wrap {
+  width: 50%;
+  min-height: 100vh;
+}
+
+.container .container_cards .card-wrap .card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container .container_cards .card-wrap .card .card-header,
+.container .container_cards .card-wrap .card .card-new-post,
+.container .container_cards .card-wrap .card .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container .container_cards .card-wrap .card .card-new-post,
+.container .container_cards .card-wrap .card .card-body {
+  box-shadow: 0 0 15px 3px rgba(150, 150, 150, 0.479);
+  border-radius: 10px;
+}
+
+.container .container_cards .card-wrap .card .card-header {
+  min-height: 150px;
+  margin-top: 150px;
+  background-image: linear-gradient(55deg, white 10%, rgba(0, 110, 255, 0.349) 20%, white);
+}
+
+.container .container_cards .card-wrap .card .card-header h1 {
+  color: honeydew;
+  text-align: center;
+  text-shadow: -1px -1px 2px black;
+}
+
+.container .container_cards .card-wrap .card .card-body,
+.container .container_cards .card-wrap .card .card-new-post {
+  width: 75%;
+  margin-top: 5rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.103);
+  border-right: 1px solid rgba(0, 0, 0, 0.103);
+  background-color: rgba(228, 228, 228, 0.658);
+}
+
+.container .container_cards .card-wrap .card .card-new-post {
+  height: 200px;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_header,
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form {
+  width: 100%;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  font-size: 1.8rem;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form {
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form form .post-input {
+  visibility: hidden;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form form textarea {
+  border: none;
+  background-color: transparent;
+  width: 90%;
+  height: calc(100% - 25px);
+  padding: 10px;
+  resize: none;
+  margin-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  font-family: "Oswald", sans-serif;
+  outline: none;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form form textarea:focus {
+  border-bottom: 1px solid green;
+  color: black;
+}
+
+.container .container_cards .card-wrap .card .card-new-post .card-new-post_form form .submit-post {
+  align-self: flex-end;
+  font-size: 1rem;
+  width: 80px;
+  height: 25px;
+  padding: 5px 0;
+  margin: 20px 10px;
+}
+
+.container .container_cards .card-wrap .card .card-body {
+  height: auto;
+  padding: 20px;
+  margin: 50px 0;
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content {
+  width: 90%;
+  height: 95%;
+  box-shadow: 0 0 10px 2px rgba(128, 128, 128, 0.438);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header,
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header {
+  height: 50px;
+  padding-left: 20px;
+  background-image: linear-gradient(45deg, white 10%, rgba(0, 110, 255, 0.349) 20%, white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_text {
+  padding: 20px;
+  font-size: 2.5rem;
 }
 
 footer {

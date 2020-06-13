@@ -36,18 +36,43 @@
             </div>
         </div>
         <nav class="screen mobile">
+   
+            
             <ul>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/gallery">Gallery</a></li>
+                @if (Auth::user()==true)
+                <li><a href="/home">Home</a></li>
                 <li><a href="/seminar">Seminars</a></li>
                 <li><a href="/timetable">Timetable</a></li>
                 <li><a href="/prices">Prices</a></li>
                 <li><a href="/partners">Partners</a></li>
-                <li><a href="/contactForm">Contact Us</a></li>
-                {{-- <li><a href="?page=log" class="si">Sign in</a></li>  --}}
+                <li><a href="#">
+                  
+                    {{Auth::user()->name}}
+                 
+                </a>
+                </li>
+            
+                @else
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/seminar">Seminars</a></li>
+                    <li><a href="/timetable">Timetable</a></li>
+                    <li><a href="/prices">Prices</a></li>
+                    <li><a href="/partners">Partners</a></li>
+                    <li><a href="/contactForm">Contact Us</a></li>
+                    <li><a href="/login">
+                        @if (Auth::user()==true)
+                        {{Auth::user()->name}}
+                        @else
+                        Login
+                        @endif
+                        </a>
+                    </li>
+                @endif
             </ul>
         </nav>
         <div class="container">
+        
             @yield('content')
         </div>
         <footer>

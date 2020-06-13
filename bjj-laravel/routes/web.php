@@ -68,3 +68,8 @@ Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@save
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//new post
+
+Route::post('/postCreated', 'HomeController@addNewPost');
+Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');

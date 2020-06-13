@@ -16,7 +16,7 @@
                 <li><a href="/prices">Prices</a></li>
                 <li><a href="/partners">Partners</a></li>
                 <li><a href="/contactForm">Contact Us</a></li>
-                <li><a href="/admin">ADMIN</a></li>
+                <li><a href="/login">ADMIN</a></li>
             </ul>
         </nav>
         <div class="container">
