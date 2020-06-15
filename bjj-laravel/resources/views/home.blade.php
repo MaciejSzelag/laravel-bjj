@@ -28,15 +28,13 @@
                         <form action="/postCreated" method="post">
                             @csrf
                             <input class="post-input" type="text" name="auth_name" value="{{Auth::user()->name}}" readonly>
-                            <textarea name="content" id="" placeholder="{{Auth::user()->name}} what do you think?">
-
-                        </textarea>
+                            <textarea name="content" id="" placeholder="{{Auth::user()->name}} what do you think?"></textarea>
                             <input type="submit" value="Add"  class="submit-post">
                         </form>
                     </div>
                 </div>
              @foreach ($newPosts as $newPost)
-                 
+         
             
                 <div class="card-body">
                    <div class="card-body_content">
@@ -46,7 +44,16 @@
                            </h3>
                        </div>
                        <div class="cb_c_text">
-                           <p>  {{$newPost->content}}
+                       <p> 
+                           @if($newPost->content== url($newPost->content))
+
+
+
+
+                            <a href="{{ url($newPost->content)}}"> {{$newPost->content}}</a>
+                            @else
+                            {{$newPost->content}}
+                            @endif
                            </p>
                        </div>
                  

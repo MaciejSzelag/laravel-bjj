@@ -7,6 +7,7 @@ const d_seminar = document.querySelector(".admin-content .seminar");
 const d_member = document.querySelector(".admin-content .members");
 const d_news = document.querySelector(".admin-content .news");
 const d_about = document.querySelector(".admin-content .about");
+
 activeBlock(blocks, "active");
 for (let i = 0; i < blocks.length; i++) {
     blocks[i].addEventListener("click", function () {

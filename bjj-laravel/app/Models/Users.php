@@ -2,7 +2,7 @@
 namespace App\Models;
 use App\User;
 
-class Users 
+class users 
 {
     public function getAllUsers(){
         return User::all();

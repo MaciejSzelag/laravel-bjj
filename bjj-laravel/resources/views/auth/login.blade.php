@@ -3,7 +3,7 @@
 
 @extends('layouts.app', ['title' => "Login"])
 
-
+@section('content')
 <section class="admin-log">
     <div class="wrap-log">
 
@@ -80,4 +80,5 @@
 
     </div>
 </section>
+@endsection
 

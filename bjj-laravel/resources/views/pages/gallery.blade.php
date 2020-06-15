@@ -6,7 +6,7 @@
             <div class="slide-img">
                 <div class="slide-img-title">
                     <div class="wrap-p">
-                        <p>Text 1</p>
+                        <p>"Big Family!"</p>
                     </div>
 
                 </div>
@@ -17,7 +17,8 @@
 
             <div class="img-wrap">
                 <div class="desc">
-                    <p>Our warriors always work hard and on the competitions they get many medals!</p>
+                    <p>Our warriors always work hard and win many medals at competitions!
+                    </p>
                 </div>
                 <div class="img-container">
                     <img src="{{asset('images/img_gallery/img-1.jpg')}}" alt="Golden boys">

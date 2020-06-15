@@ -4,7 +4,7 @@ namespace App\Persistance;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EloquentNewPost extends Model
+class EloquentnewPost extends Model
 {
     protected $table = 'new_post';
 

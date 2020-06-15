@@ -1,12 +1,12 @@
 @extends('layouts.admin.adminApp', ['title' => $title])
 <div class="navLine">
-    <div class="name" id="id-name">Ian Harrop</div>
+    <div class="name" id="id-name"><a href="logout">Logout</a></div>
     <div class="date">{{date('d / M / Y')}}</div>
 </div>
 <aside class="dashoard-menu-wrap">
     <div class="dashoard-menu">
         <div class="dashoard-loged topId">
-            <h1 id="admin-id"> Admin </h1>
+            <h1 id="admin-id"> {{Auth::user()->name}} </h1>
         </div>
        <div class="dashoard-loged"></div>
        <h2>Main Navigation</h2>
@@ -18,6 +18,7 @@
        
        <div class="block News">News</div>
        <div class="block About">About</div>
+       <div class="block Home"><a href="/home">Home</a></div>
     </div>
 
 
@@ -44,6 +45,9 @@
      <section class="adminPanel about ">
         @include('/pages/admin/dashboard/d-about')
      </section>
+     {{-- <section class="adminPanel home ">
+        @include('home')
+     </section> --}}
 </section>
 
 <script src="{{asset('/../js/dashboard/functions.js')}}"></script>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -35,7 +36,12 @@ class LoginController extends Controller
     public function __construct()
     {
 
-        #dd(333);
+        // dd(333);
         $this->middleware('guest')->except('logout');
     }
+
+    public function logout() {
+        Auth::logout();
+        return redirect('/login');
+      }
 }

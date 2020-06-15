@@ -26,6 +26,9 @@ Route::get('/admin', 'AdminController@showAdmin');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
 
 
+
+// Route::post('pages/admin/dashboard', 'HomeController@index');
+
 Route::get('/dashboard', 'DashboardController@dashboardPanel');
 // Route::get('pages.admin.dashboard', 'DashboardController@counerMember');
 //Route fo add new member 
@@ -68,8 +71,13 @@ Route::post('pages/admin/update/{id}', ['uses' => 'DashboardPriceController@save
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//for logout
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 
 //new post
 
 Route::post('/postCreated', 'HomeController@addNewPost');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
+
+

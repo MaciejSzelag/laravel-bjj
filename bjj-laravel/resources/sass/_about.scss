@@ -8,7 +8,7 @@
 
     .about_content {
         @include flexCenterColumn;
-        max-width: 1920px;
+        max-width: 1440px;
 
         .about-logo-head {
             text-align: center;
@@ -36,7 +36,7 @@
         .about_p1 {
             text-align: left;
             text-indent: 50px;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         .about_p {

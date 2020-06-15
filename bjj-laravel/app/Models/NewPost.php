@@ -6,7 +6,7 @@ namespace App\Models;
 use App\Persistance\EloquentNewPost;
 
 
-class NewPost
+class newPost
 {
     public function getAllPosts()
     {

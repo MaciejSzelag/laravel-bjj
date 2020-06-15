@@ -5,18 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\TeamMember;
-use App\Models\PricingPlans;
-use App\Models\Timetable;
-use App\Models\TimetableClassInformation;
+use App\Models\pricingPlans;
+use App\Models\timetable;
+use App\Models\timetableClassInformation;
 
 class DashboardController extends Controller
 {
 
-    public function __construct(TeamMember $teamMembers,PricingPlans $PricingPlans, Timetable $Timetables, TimetableClassInformation $TimetableClassInformation ){
+    public function __construct(TeamMember $teamMembers,pricingPlans $pricingPlans, timetable $timetables, timetableClassInformation $timetableClassInformation ){
         $this->teamMembers = $teamMembers; 
-        $this->PricingPlans = $PricingPlans; 
-        $this->Timetable = $Timetables;
-        $this->TimetableClassInformation = $TimetableClassInformation;
+        $this->pricingPlans = $pricingPlans; 
+        $this->timetable = $timetables;
+        $this->timetableClassInformation = $timetableClassInformation;
     }
 
      public function dashboardPanel(){
@@ -24,12 +24,12 @@ class DashboardController extends Controller
 
         $members = $this->teamMembers->getAllMembers();
         $length = $members->count();
-        $mondays = $this->Timetable->getByDay('Monday');
-        $tuesdays = $this->Timetable->getByDay('Tuesday');
-        $wednesdays = $this->Timetable->getByDay('Wednesday');
-        $thursdays = $this->Timetable->getByDay('Thursday');
-        $fridays = $this->Timetable->getByDay('Friday');
-        $saturdays = $this->Timetable->getByDay('Saturday');
+        $mondays = $this->timetable->getByDay('Monday');
+        $tuesdays = $this->timetable->getByDay('Tuesday');
+        $wednesdays = $this->timetable->getByDay('Wednesday');
+        $thursdays = $this->timetable->getByDay('Thursday');
+        $fridays = $this->timetable->getByDay('Friday');
+        $saturdays = $this->timetable->getByDay('Saturday');
 
         $red= 'Red';
         $green= 'Green';
@@ -37,16 +37,19 @@ class DashboardController extends Controller
         $yellow = 'Yellow';
         $blue = 'Blue';
 
-        $classInfos = $this->TimetableClassInformation->getAllClassInformation();
+        $classInfos = $this->timetableClassInformation->getAllClassInformation();
+        
+        // $newPosts = $this->newPost->getAllPosts();
+
 
         $whiteBelts = $this->teamMembers->getCountByLevel('white');
         $blueBelts = $this->teamMembers->getCountByLevel('blue');
         $purpleBelts = $this->teamMembers->getCountByLevel('purple');
         $brownBelts = $this->teamMembers->getCountByLevel('brown');
         $blackBelts = $this->teamMembers->getCountByLevel('black');
-        $privates = $this->PricingPlans->getPriceByTypeId('private');
-        $adults = $this->PricingPlans->getPriceByTypeId('adult');
-        $kids = $this->PricingPlans->getPriceByTypeId('kid');
+        $privates = $this->pricingPlans->getPriceByTypeId('private');
+        $adults = $this->pricingPlans->getPriceByTypeId('adult');
+        $kids = $this->pricingPlans->getPriceByTypeId('kid');
         return view('pages.admin.dashboard', compact(
             'title',
             'members',

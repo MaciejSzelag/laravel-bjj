@@ -40,18 +40,15 @@
             
             <ul>
                 @if (Auth::user()==true)
-                <li><a href="/home">Home</a></li>
-                <li><a href="/seminar">Seminars</a></li>
-                <li><a href="/timetable">Timetable</a></li>
-                <li><a href="/prices">Prices</a></li>
-                <li><a href="/partners">Partners</a></li>
-                <li><a href="#">
-                  
-                    {{Auth::user()->name}}
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/seminar">Seminars</a></li>
+                    <li><a href="/timetable">Timetable</a></li>
+                    <li><a href="/prices">Prices</a></li>
+                    <li><a href="/partners">Partners</a></li>
+                    <li><a href="/contactForm">Contact Us</a></li>
+                    <li><a href="/home"> {{Auth::user()->name}}</a><span></span><a href="logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
                  
-                </a>
-                </li>
-            
                 @else
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/gallery">Gallery</a></li>
@@ -60,14 +57,7 @@
                     <li><a href="/prices">Prices</a></li>
                     <li><a href="/partners">Partners</a></li>
                     <li><a href="/contactForm">Contact Us</a></li>
-                    <li><a href="/login">
-                        @if (Auth::user()==true)
-                        {{Auth::user()->name}}
-                        @else
-                        Login
-                        @endif
-                        </a>
-                    </li>
+                    <li><a href="/login">Login</a> <span>/</span><a href="/register">Register</a></li>
                 @endif
             </ul>
         </nav>

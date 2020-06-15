@@ -5,13 +5,14 @@
     width: 100%;
     height: auto;
     min-height: 120vh;
-    background-image: $blueGradienMobile30;
+    // background-image: $blueGradienMobile30;
+    background-color: rgb(245, 245, 245);
 
 
 
     h1 {
         margin: 10rem 0;
-        color: white;
+        color: black;
         font-size: 5rem;
         ;
     }

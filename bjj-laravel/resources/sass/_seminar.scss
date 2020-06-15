@@ -62,7 +62,8 @@
         width: 100%;
         max-width: 1920px;
         height: 130vh;
-        background-image: $blueGradienMobile30;
+        // background-image: $blueGradienMobile30;
+        background-color: rgba(0, 78, 124, 0.897);
         color: wheat;
         text-shadow: -2px -2px 4px rgb(5, 60, 85);
 
@@ -93,7 +94,8 @@
         .content-txt {
             @include flexCenter;
             height: 70%;
-            box-shadow: 0 -10px 10px 3px rgba(82, 96, 224, 0.753);
+            box-shadow: 0 -10px 10px 3px rgba(0, 78, 124, 0.507);
+            
 
             .txt-picture,
             .txt-desc {
