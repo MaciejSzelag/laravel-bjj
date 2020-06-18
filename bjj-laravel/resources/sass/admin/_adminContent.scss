@@ -7,9 +7,10 @@
     top: $heightBlock;
     left: $adminAsideWidth;
     width: calc(100% - #{$adminAsideWidth});
+    // max-width: 1920px;
     // height: calc(100% - #{$heightBlock});
-    height: auto;
-    background-color: rgb(253, 254, 255);
+
+    // background-color: rgb(253, 254, 255);
     display: flex;
     justify-content: center;
     align-items: center;

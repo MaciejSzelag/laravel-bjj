@@ -1,4 +1,4 @@
-
+{{-- 
     @extends('layouts.head')
     <body>
          <div class="bars-wrap" id="mobile-menu">
@@ -29,4 +29,4 @@
         {{-- <script src="{{asset('js/loadPage.js')}}"></script> --}}
         <script src="{{asset('js/main.js')}}"></script>
     </body>
-</html>
+</html> --}}

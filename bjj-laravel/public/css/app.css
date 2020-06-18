@@ -257,6 +257,8 @@ html {
   z-index: 100;
   background-color: #1a70a1;
   overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.192);
+  box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.192);
   border-bottom: 1px solid rgba(255, 255, 255, 0.192);
 }
 
@@ -274,9 +276,10 @@ html {
   align-items: center;
   width: auto;
   height: 60%;
-  margin: 15px;
+  margin: 15px 5px;
   transform: translateY(0);
-  opacity: 1;
+  border-top-left-radius: 5px;
+  box-shadow: inset 5px 5px 10px 1px rgba(255, 255, 255, 0.192);
 }
 
 .screen ul li span {
@@ -291,7 +294,7 @@ html {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
   text-decoration: none;
   color: white;
   text-shadow: 0 0 2px black;
@@ -3419,7 +3422,7 @@ html {
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
-  height: 100%;
+  height: 200%;
   background-color: #17242b;
 }
 
@@ -3480,31 +3483,25 @@ html {
 }
 
 .dashoard-menu-wrap .dashoard-menu .topId {
-  background-color: #357ca5;
-}
-
-.dashoard-menu-wrap .dashoard-menu .dashoard-loged {
   width: 100%;
-  margin-top: 0;
-  border: none;
+  background-color: #1a70a1;
+  margin-bottom: 80px;
 }
 
 .navLine {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100% - 20rem);
+  width: 20rem;
   height: 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #3393ca;
   z-index: 10;
 }
 
-.navLine .name,
 .navLine .date {
-  width: auto;
+  width: 20rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -3518,11 +3515,6 @@ html {
   padding: 0 4rem;
 }
 
-.navLine .name {
-  border-right: 1px solid rgba(255, 255, 255, 0.678);
-  padding: 0 3.5rem;
-}
-
 .admin-dashboard-body {
   background-color: #1a2226;
 }
@@ -3532,8 +3524,6 @@ html {
   top: 4rem;
   left: 20rem;
   width: calc(100% - 20rem);
-  height: auto;
-  background-color: #fdfeff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3555,12 +3545,13 @@ html {
 }
 
 .head {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 20rem;
+  right: 20rem;
   height: 40px;
   background-color: #222d32;
+  z-index: 99;
 }
 
 .head .title {
@@ -4387,7 +4378,7 @@ html {
 .container .container_cards .card-wrap .card .card-header {
   min-height: 150px;
   margin-top: 150px;
-  background-image: linear-gradient(55deg, white 10%, rgba(0, 78, 124, 0.897) 20%, rgba(0, 78, 124, 0.212));
+  background-color: #004e7c;
 }
 
 .container .container_cards .card-wrap .card .card-header h1 {
@@ -4402,11 +4393,11 @@ html {
   margin-top: 5rem;
   border-left: 1px solid rgba(0, 0, 0, 0.103);
   border-right: 1px solid rgba(0, 0, 0, 0.103);
-  background-color: rgba(228, 228, 228, 0.301);
 }
 
 .container .container_cards .card-wrap .card .card-new-post {
   height: 200px;
+  background-color: #e4e4e4;
 }
 
 .container .container_cards .card-wrap .card .card-new-post .card-new-post_header,
@@ -4480,6 +4471,7 @@ html {
   box-shadow: 0 0 10px 2px rgba(128, 128, 128, 0.178);
   border-radius: 10px;
   overflow: hidden;
+  background-color: #e4e4e4;
 }
 
 .container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header,
@@ -4492,10 +4484,25 @@ html {
 }
 
 .container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header {
+  position: relative;
   height: 50px;
   padding-left: 20px;
-  background-color: rgba(0, 78, 124, 0.281);
+  background-color: #00598d;
   border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  color: whitesmoke;
+  box-shadow: inset 0 0 10px 3px rgba(255, 255, 255, 0.171);
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header .post-owner-name {
+  font-size: 2.5rem;
+}
+
+.container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_header .date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-size: 1.8rem;
 }
 
 .container .container_cards .card-wrap .card .card-body .card-body_content .cb_c_text {

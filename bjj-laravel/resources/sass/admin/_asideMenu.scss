@@ -7,14 +7,17 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
     left: 0;
     width: $adminAsideWidth;
     height: 100vh;
+    // z-index: 101;
 
     .dashoard-menu {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         flex-direction: column;
-        height: 100%;
+        height: 200%;
         background-color: rgb(23, 36, 43);
+
+
 
         h1,
         h2 {
@@ -43,6 +46,7 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
             justify-content: flex-start;
             align-items: center;
             width: 90%;
+
             border: $border;
             border-right: none;
             border-top: none;
@@ -74,13 +78,18 @@ $border:.1rem solid rgba(255, 255, 255, 0.151);
         }
 
         .topId {
-            background-color: rgb(53, 124, 165);
+            width: 100%;
+            background-color: rgb(26, 112, 161);
+            margin-bottom: 80px;
+
         }
 
-        .dashoard-loged {
-            width: 100%;
-            margin-top: 0;
-            border: none;
-        }
+        // .dashoard-loged {
+        //     width: 100%;
+        //     height: 100px;
+        //     margin-top: 0;
+        //     border: none;
+
+        // }
     }
 }

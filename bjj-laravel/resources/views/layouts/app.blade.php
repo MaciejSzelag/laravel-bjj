@@ -36,10 +36,11 @@
             </div>
         </div>
         <nav class="screen mobile">
-   
+         
             
             <ul>
                 @if (Auth::user()==true)
+              
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/seminar">Seminars</a></li>
@@ -47,8 +48,11 @@
                     <li><a href="/prices">Prices</a></li>
                     <li><a href="/partners">Partners</a></li>
                     <li><a href="/contactForm">Contact Us</a></li>
+                    @if(Auth::user()->user_level_id == 2)
+                    <li><a href="/dashboard" style=" color:rgb(253, 168, 168)">Control Panel</a></li>
+                    @endif
                     <li><a href="/home"> {{Auth::user()->name}}</a><span></span><a href="logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
-                 
+
                 @else
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/gallery">Gallery</a></li>

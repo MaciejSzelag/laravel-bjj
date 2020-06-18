@@ -16,7 +16,7 @@ class CreateNewPost extends Migration
         Schema::create('new_post', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('auth_name');
-            $table->string('content');
+            $table->text('content');
             $table->timestamps();
         });
     }

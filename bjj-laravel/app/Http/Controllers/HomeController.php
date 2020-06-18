@@ -85,9 +85,9 @@ class HomeController extends Controller
             //----------------------------------------------------
             if($level_access == 1){
                 return view('home', compact('newPosts'))->with('status', 'You are logged in!');
-            }else{
+            }else if($level_access == 2){
 
-                return view('pages.admin.dashboard',compact(
+                return view('home',compact(
                     'title',
                     'members',
                     'length',

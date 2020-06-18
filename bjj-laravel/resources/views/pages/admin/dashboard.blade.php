@@ -1,24 +1,24 @@
 @extends('layouts.admin.adminApp', ['title' => $title])
 <div class="navLine">
-    <div class="name" id="id-name"><a href="logout">Logout</a></div>
+    {{-- <div class="name" id="id-name"><a href="logout">Logout</a></div> --}}
     <div class="date">{{date('d / M / Y')}}</div>
 </div>
 <aside class="dashoard-menu-wrap">
     <div class="dashoard-menu">
-        <div class="dashoard-loged topId">
-            <h1 id="admin-id"> {{Auth::user()->name}} </h1>
+        <div class="topId">
+            <h1 id="admin-id">Admin - {{Auth::user()->name}} </h1>
         </div>
-       <div class="dashoard-loged"></div>
+       {{-- <div class="dashoard-loged"></div> --}}
        <h2>Main Navigation</h2>
        <div class="block Home  active">Home</div>
        <div class="block Members">Members</div>
        <div class="block Prices ">Prices</div>
        <div class="block Timetable">Timetable</div>
-       <div class="block Seminar">Seminar</div>
+       {{-- <div class="block Seminar">Seminar</div>
        
        <div class="block News">News</div>
-       <div class="block About">About</div>
-       <div class="block Home"><a href="/home">Home</a></div>
+       <div class="block About">About</div> --}}
+     
     </div>
 
 

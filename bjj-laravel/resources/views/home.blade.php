@@ -39,17 +39,20 @@
                 <div class="card-body">
                    <div class="card-body_content">
                        <div class="cb_c_header">
-                           <h3 class="post-owner-name">
+                           <p class="post-owner-name">
                                {{$newPost->auth_name}}
-                           </h3>
+                           </p>
+                           <span class="date">
+                               
+                            @if($newPost->created_at->format('d M Y')  == date('d M Y'))
+                       Today
+                            @else
+                            {{ $newPost->created_at->format('d M Y') }}</span>
+                            @endif
                        </div>
                        <div class="cb_c_text">
                        <p> 
                            @if($newPost->content== url($newPost->content))
-
-
-
-
                             <a href="{{ url($newPost->content)}}"> {{$newPost->content}}</a>
                             @else
                             {{$newPost->content}}

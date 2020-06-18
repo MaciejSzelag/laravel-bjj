@@ -5,11 +5,13 @@ $submit_post_height: 25px;
 .container {
     width: 100%;
 
+
     .container_cards {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+
 
         .card-wrap {
             width: 50%;
@@ -42,10 +44,7 @@ $submit_post_height: 25px;
                 .card-header {
                     min-height: 150px;
                     margin-top: 150px;
-                    background-image: linear-gradient(55deg,
-                            white 10%,
-                            rgba(0, 78, 124, 0.897) 20%,
-                            rgba(0, 78, 124, 0.212));
+                    background-color: rgb(0, 78, 124);
 
                     h1 {
                         color: honeydew;
@@ -57,15 +56,15 @@ $submit_post_height: 25px;
                 .card-body,
                 .card-new-post {
                     width: 75%;
-
                     margin-top: 5rem;
                     border-left: $borderLine;
                     border-right: $borderLine;
-                    background-color: rgba(228, 228, 228, 0.301);
+
                 }
 
                 .card-new-post {
                     height: 200px;
+                    background-color: rgb(228, 228, 228);
 
                     .card-new-post_header,
                     .card-new-post_form {
@@ -79,11 +78,13 @@ $submit_post_height: 25px;
                         height: $post_header_height;
                         border-bottom: $borderLine;
                         font-size: 1.8rem;
+
                     }
 
                     .card-new-post_form {
                         width: 100%;
                         height: calc(100% - #{$post_header_height});
+
 
                         form {
                             display: flex;
@@ -140,6 +141,7 @@ $submit_post_height: 25px;
                         box-shadow: 0 0 10px 2px rgba(128, 128, 128, 0.178);
                         border-radius: 10px;
                         overflow: hidden;
+                        background-color: rgb(228, 228, 228);
 
                         .cb_c_header,
                         .cb_c_text {
@@ -151,10 +153,26 @@ $submit_post_height: 25px;
                         }
 
                         .cb_c_header {
+                            position: relative;
                             height: 50px;
                             padding-left: 20px;
-                            background-color: rgba(0, 78, 124, 0.281);
+                            background-color: rgb(0, 89, 141);
                             border-bottom: $borderLine;
+                            color: whitesmoke;
+                            box-shadow: inset 0 0 10px 3px rgba(255, 255, 255, 0.171);
+
+                            .post-owner-name {
+                                font-size: 2.5rem;
+                            }
+
+                            .date {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 20px;
+                                font-size: 1.8rem;
+
+                            }
                         }
 
                         .cb_c_text {
