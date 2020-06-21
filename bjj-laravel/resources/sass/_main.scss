@@ -58,11 +58,11 @@ html {
             width: auto;
             height: 60%;
             margin: 15px 5px;
-            
+
             transform: translateY(0);
             border-top-left-radius: 5px;
-            // opacity: 1;
-            box-shadow: inset 5px 5px 10px 1px rgba(255, 255, 255, 0.192);
+            border-radius: 5px;
+            box-shadow: inset 10px 10px 10px 1px rgba(255, 255, 255, 0.192), inset -5px -5px 8px 1px rgba(0, 0, 0, 0.205);
 
             span {
                 font-size: 3rem;
@@ -74,8 +74,8 @@ html {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                padding: 0 20px;
-               
+                padding: 0 30px;
+
                 text-decoration: none;
                 color: white;
                 text-shadow: 0 0 2px rgb(0, 0, 0);
@@ -107,7 +107,7 @@ html {
                 content: "";
                 bottom: -13px;
                 left: 0;
-                width: 100%;
+                width: 98%;
                 height: 1px;
                 background-color: transparent;
                 transition: .3s ease-in-out;

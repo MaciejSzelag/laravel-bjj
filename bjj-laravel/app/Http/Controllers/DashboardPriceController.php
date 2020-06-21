@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PricingPlans;
 
-
 class DashboardPriceController extends Controller
 {    public function __construct(PricingPlans $PricingPlans){
     $this->PricingPlans = $PricingPlans; 
@@ -23,5 +22,4 @@ class DashboardPriceController extends Controller
         $findIdMember->save();
         return redirect('/dashboard')->with('status-mamber','Plan has been changed');
     }
-   
 }
