@@ -145,7 +145,7 @@ $submit_post_height: 25px;
 
                         .drop-btn {
                             float: right;
-                            color: rgb(51, 51, 51);
+                            color: rgb(143, 143, 143);
                             // padding: 16px;
                             // font-size: 16px;
                             border: none;
@@ -156,6 +156,10 @@ $submit_post_height: 25px;
                             }
                         }
 
+                        .drop-btn:hover {
+                            color: rgb(61, 61, 61);
+                        }
+
                         .dropdown-content {
                             display: none;
 
@@ -163,9 +167,9 @@ $submit_post_height: 25px;
                             align-items: center;
                             flex-direction: column;
                             position: absolute;
-                            top: -20px;
-                            right: -130px;
-                            min-width: 100px;
+                            top: 30px;
+                            right: 40px;
+                            min-width: 180px;
                             // height: 100%;
                             background-color: #f1f1f1;
                             overflow: hidden;

@@ -48,12 +48,14 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <ul class="dropdown-content"> 
-                            <li>   @if(Auth::user()->id == 2)
-                                <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete</a></button>
-                                @endif
+                            <li>
+                                {{-- @if(Auth::user()->id == 2) --}}
+                                    <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete this post</a></button>
+                                {{-- @endif --}}
                             </li>
                         </ul>
                     </div>
+              
 
                  
                     <div class="avatar-container avatar-owner">
@@ -95,9 +97,18 @@
                    
                 @else
                 <div class="card-body">
-                    @if(Auth::user()->id == 2)
-                    <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete</a></button>
-                    @endif
+                    <div class="card-post-menu">
+                        <div class="drop-btn">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <ul class="dropdown-content"> 
+                            <li>
+                                @if(Auth::user()->id == 2)
+                                    <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete this post</a></button>
+                                @endif
+                            </li>
+                        </ul>
+                    </div>
                     <div class="avatar-container avatar-user">
                         <div class="comment-dots user">
                             <i class="fas fa-comment-dots"></i>
