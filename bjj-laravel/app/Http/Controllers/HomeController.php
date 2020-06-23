@@ -45,6 +45,7 @@ class HomeController extends Controller
             // Get the currently authenticated user's ID...
             $id = Auth::id();
             $level_access = $user->user_level_id;
+            // $level_access_unique_user_id = $user->unique_user_id;
 
             // add user level
             // add it compact itd
@@ -125,9 +126,16 @@ class HomeController extends Controller
         public function addNewPost(Request $request){
                 $request->validate([
                     'auth_name' => 'required',
-                    'content' => 'required'
+                    'content' => 'required',
+                    'user_id'=> 'required'
                 ]);
                 $this->newPost->createNewPost($request);
                 return redirect('/home')->with('status', 'A new post has been added');
+        }
+
+        public function deletePost($id){
+            $findPostID = $this->newPost->getAll()->find($id);
+            $findPostID->delete();
+            return redirect("/home")->with('status','A  post has been deleted!');
         }
 }

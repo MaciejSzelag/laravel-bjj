@@ -8,6 +8,10 @@ use App\Persistance\EloquentNewPost;
 
 class newPost
 {
+    public function getAll()
+    {
+        return EloquentNewPost::all();
+    }
     public function getAllPosts()
     {
         return EloquentNewPost::latest()->get();
@@ -16,4 +20,5 @@ class newPost
     public function createNewPost($request){
         return EloquentNewPost::create($request->all());
     }
+
 }

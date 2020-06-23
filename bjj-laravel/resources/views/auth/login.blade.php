@@ -1,5 +1,3 @@
-{{-- @extends('layouts.head', ['title' => 11]) --}}
-
 @extends('layouts.app', ['title' => "Login"])
 
 @section('content')

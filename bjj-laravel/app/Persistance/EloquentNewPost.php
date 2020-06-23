@@ -8,5 +8,5 @@ class EloquentnewPost extends Model
 {
     protected $table = 'new_post';
 
-    protected $fillable = ['auth_name','content'];
+    protected $fillable = ['auth_name','content','user_id'];
 }

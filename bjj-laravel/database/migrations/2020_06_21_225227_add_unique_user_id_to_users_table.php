@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewPost extends Migration
+class AddUniqueUserIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateNewPost extends Migration
      */
     public function up()
     {
-        Schema::create('new_post', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('auth_name');
-            $table->text('content');
-            $table->string('user_id');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('unique_user_id');
         });
     }
 
@@ -29,6 +25,8 @@ class CreateNewPost extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('new_post');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('unique_user_id');
+        });
     }
 }

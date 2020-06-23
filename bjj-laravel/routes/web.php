@@ -79,5 +79,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::post('/postCreated', 'HomeController@addNewPost');
 Route::post('pages/admin/dashboard', 'DashboardController@dashboardPanel');
+//delete post
+Route::get('home/delete/{id}', ['uses'=>'HomeController@deletePost','as'=>'deletePost']);
 
 
