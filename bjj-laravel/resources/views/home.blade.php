@@ -48,11 +48,15 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <ul class="dropdown-content"> 
-                            <li>
-                                {{-- @if(Auth::user()->id == 2) --}}
-                                    <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete this post</a></button>
-                                {{-- @endif --}}
-                            </li>
+                            {{-- @if(Auth::user()->id == 2) --}}
+                                <li>
+                                
+                                        <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete this post</a></button>
+                                
+                                </li>
+                            {{-- @endif --}}
+                            <li>Edit</li>
+                            <li class="hidePost">Hide post</li>
                         </ul>
                     </div>
               
@@ -102,11 +106,13 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <ul class="dropdown-content"> 
-                            <li>
-                                @if(Auth::user()->id == 2)
+                            @if(Auth::user()->id == 2)
+                                <li>
                                     <button class="delete-post-btn"><a href="{{route('deletePost',['id'=> $newPost->id])}}">Delete this post</a></button>
-                                @endif
-                            </li>
+                                </li>
+                            @endif
+                             
+                                <li class="hidePost">Hide post - temporary</li>
                         </ul>
                     </div>
                     <div class="avatar-container avatar-user">
